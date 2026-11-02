@@ -57,10 +57,10 @@ window.UF_ROADMAP = {
     {
       "n": 1, "bar": [0, 3], "name": "Setup", "when": "October – December 2026", "months": "Months 10–12", "here": true,
       "headline": "We set up the test environment",
-      "what": ["ENG, Tecnalia and the technical partners build one shared test environment for the three cities.", "It is ready in January 2027, when the testing window starts."],
+      "what": ["ENG and the technical partners build one shared test environment for the three cities.", "It is ready in January 2027, when the testing window starts."],
       "cityDoes": ["Nothing to install. No servers.", "Your only part: share your requirements and user stories (November) and answer a few technical questions (December)."],
       "cityNot": ["No installation", "No servers"],
-      "help": "ENG, Tecnalia and the technical partners"
+      "help": "ENG and the technical partners"
     },
     {
       "n": 2, "bar": [3, 9], "name": "Testing window", "when": "January – June 2027", "months": "Months 13–18", "here": false,
@@ -134,7 +134,7 @@ window.UF_ROADMAP = {
   "dates": [
     { "when": "November 2026", "what": "Requirements and user stories collected together with the cities.", "who": "ENG · cities" },
     { "when": "December 2026", "what": "The cities answer the technical questions. The data tools and collaboration platform (V1) are delivered.", "who": "Cities · ENG" },
-    { "when": "January 2027", "what": "The test environment is ready. The testing window opens.", "who": "ENG · Tecnalia" },
+    { "when": "January 2027", "what": "The test environment is ready. The testing window opens.", "who": "ENG · technical partners" },
     { "when": "January – June 2027", "what": "The cities test the tools and give structured feedback.", "who": "Cities · tool owners" },
     { "when": "June 2027", "what": "Feedback and final selection of the tools. First integrated Toolbox (MS4).", "who": "Cities · tool owners" },
     { "when": "June 2027 – April 2028", "what": "Local setup and first implementation round in each city.", "who": "Cities · technical partners" },
