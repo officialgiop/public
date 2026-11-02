@@ -7,6 +7,7 @@ A clickable mockup of the future Urban-Flow Local Digital Twin Toolbox portal.
 - **Marketplace:** the Analyse · Simulate · Forecast layer, shown as one row per domain (Climate resilience, Energy, Space & infrastructures, EV charging infra, CCAV fleet, with the colours of the WP6 slide) with the 17 pilot tools directly under their domain. Click a tool for partner, cities, WP/task, GitHub links and, where available, its demo video.
 - **Tools & partners:** the list of all tools with the partner that develops them and a domain tag. The 17 Marketplace tools come first, then the other tools; tools not developed by a project partner carry an "External tool" label. Filters by Tool, Partner and Domain (with a Marketplace option), plus free-text search. Click a tool for its details and demo video.
 - **Valdarena (Urban-Flow Use Case):** a fictional use case told as a comic for non-technical audiences (`#/comic`), reachable from the "Urban-Flow Use Case" button in the header and from the left menu. Characters and speech bubbles, highlighted words that light up the matching parts of a simplified "city platform" map, and a Play button (or the ← → keys) that advances panel by panel.
+- **Roadmap for the cities:** a page for the municipalities of the pilot cities (`#/roadmap`, "Roadmap" in the header and in the left menu). It explains in simple English what the Toolbox is, the goal (one Toolbox in each city by April 2028, M28), the four steps with a timeline (what the city does, what it does not have to do, who helps), a four-panel comic, how the final list of tools is made (system tools + tools chosen at the General Assembly in Florence + tools to test for the Grant Agreement) and the key dates. The "Print / save as PDF" button prints a compact A4 version (vertical timeline); the ready-made PDF is `assets/Urban-Flow_Roadmap_for_the_cities.pdf`.
 - **Reference Architecture:** the Urban-Flow reference architecture with every block clickable (summary, D3.1 reference, partner, GitHub links, "open module"). Tool cards show a "Watch video" button for the tools with a demo (Decidim, KPI Manager, Idra, GeoCacher).
 
 All figures, maps and tables are sample data for illustration.
@@ -68,3 +69,9 @@ Only `"name"` is required; leave out the fields you do not need.
 The `"id"` must be new (lowercase, no spaces). The `"domain"` must be one of: Climate Resilience / Adaptation, Energy Communities, Space & Infrastructures, EV Charging Infrastructure, CCAV Fleet.
 
 **If something is wrong** (unknown block id, JSON error, missing file), the Home and Architecture pages show a yellow **Configuration issues** box that says what to fix.
+
+## Editing the Roadmap for the cities (no coding needed)
+
+All the text of the page is in **`config/roadmap.js`** (plain JSON after `window.UF_ROADMAP =`; the comment at the top lists every field): goal and numbers, the four steps (`steps`, with `bar` = first month and last month + 1 on the timeline, 0 = October 2026), milestones and the "We are here" marker (`timeline`), the comic (`comic`), the tool groups (`tools`) and the key dates (`dates`). The Marketplace tools of each city are read from `cityMatrix` in `config/architecture-tools.js`.
+
+After changing the content, regenerate the PDF: open the page, press **Print / save as PDF**, choose A4, tick "Background graphics", save as `assets/Urban-Flow_Roadmap_for_the_cities.pdf`.

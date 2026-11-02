@@ -997,6 +997,157 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
 .tright .tfl li{padding-top:calc(3px * var(--ts,1));padding-bottom:calc(7px * var(--ts,1))}
 .tright .tsteph h2{font-size:calc(24px * var(--ts,1))}
 .tright .tcode2{height:calc(64px * var(--ts,1));min-width:calc(64px * var(--ts,1))}
+
+/* ---------- roadmap for the cities (also printed to PDF) ---------- */
+.rm-sec{display:flex;flex-direction:column;gap:14px}
+.rm-sec>h2{margin:0;font-size:30px;font-weight:800;color:var(--g800)}
+.rm-lead{margin:0;font-size:17px;line-height:1.6;color:var(--ink2);max-width:880px}
+.rm-printhead,.rm-printonly{display:none}
+.rm-goal{padding:34px 36px;border-radius:20px;color:#fff;background:linear-gradient(90deg,rgba(14,32,29,.95) 0%,rgba(14,32,29,.84) 100%),url('assets/aerial-2.jpg') center/cover;display:flex;flex-direction:column;gap:12px}
+.rm-goal .eyebrow{color:var(--lime)}
+.rm-goal h2{margin:0;font-size:36px;line-height:1.15;font-weight:800;color:var(--lime);max-width:900px}
+.rm-goal p{margin:0;font-size:18px;line-height:1.55;color:#e8eeec;max-width:820px}
+.rm-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
+.rm-stat{display:flex;flex-direction:column;gap:2px;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.1);border:1px solid rgba(219,242,124,.4)}
+.rm-stat strong{font-size:34px;line-height:1.1;font-weight:800;color:var(--lime)}
+.rm-stat span{font-weight:700}
+.rm-stat small{font-size:13px;color:#cfdad6}
+.rm-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:start}
+.rm-pts{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+.rm-pts li{display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-left:6px solid var(--lime);background:#fff;border-radius:0 12px 12px 0;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rm-pts strong{color:var(--g800)}
+.rm-pts span{color:var(--ink2);font-size:15px}
+.rm-fig{margin:0;padding:18px;border-radius:16px;background:#fff;border:1px solid var(--line)}
+.rm-fig figcaption{font-weight:800;color:var(--g800);margin-bottom:10px}
+.rm-lays{display:grid;grid-template-columns:minmax(0,1fr) 112px;gap:8px}
+.rm-lmain{display:flex;flex-direction:column;gap:8px}
+.rm-lay,.rm-liam{display:flex;flex-direction:column;gap:2px;padding:10px 14px;border-radius:10px;font-size:14px;line-height:1.35}
+.rm-lay strong,.rm-liam strong{font-size:15px}
+.rm-lay.ui{background:#1d5778;color:#fff}
+.rm-lay.mp{background:var(--g800);color:#fff;box-shadow:0 0 0 3px var(--lime) inset}
+.rm-lay.mp strong{color:var(--lime)}
+.rm-lay.base{background:var(--blue-layer);color:var(--blue-ink)}
+.rm-lay.src{background:var(--ext);color:var(--ink2);border:2px dashed #7d8784}
+.rm-liam{background:var(--navy);color:#fff;justify-content:center;font-size:13px}
+.rm-flowt{margin:14px 0 6px;font-size:13px;font-weight:700;color:var(--g600)}
+.rm-flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.rm-fl{display:inline-flex;gap:6px;align-items:center;padding:4px 12px;border-radius:999px;background:var(--g800);color:#fff;font-weight:700;font-size:14px}
+.rm-fl b{color:var(--lime)}
+.rm-fl.last{background:var(--lime);color:var(--g900)}.rm-fl.last b{color:var(--g900)}
+.rm-fa{color:var(--g600);font-weight:800}
+/* timeline (wide screens) */
+.rm-gantt{display:grid;row-gap:8px;padding:34px 16px 14px;background:#fff;border:1px solid var(--line);border-radius:16px;position:relative}
+.rm-gy{font-weight:800;color:var(--g800);border-bottom:2px solid var(--g600);font-size:13px;padding-bottom:2px;margin-right:2px}
+.rm-gm{font-size:11px;text-align:center;color:var(--muted)}
+.rm-gl{grid-column:1;align-self:center;font-weight:700;color:var(--g800);font-size:14px}
+.rm-gl b{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--g900);color:var(--lime);font-size:13px;margin-right:4px}
+.rm-gb{align-self:center;display:flex;align-items:center;min-height:26px;padding:0;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rm-gb.s1{background:var(--g600);color:#fff}.rm-gb.s2{background:var(--lime);color:var(--g900)}.rm-gb.s3{background:var(--olive);color:var(--g900);padding:6px 8px}.rm-gb.s4{background:var(--g900);color:#fff}
+.rm-gl small{display:block;margin:2px 0 0 28px;font-size:11px;font-weight:600;color:var(--muted);line-height:1.2}
+.rm-gk{display:flex;flex-direction:column;align-items:center;justify-self:center;gap:2px;text-align:center;margin-top:6px;width:max-content;max-width:170px}
+.rm-gk.end{align-items:flex-end;justify-self:end;text-align:right}
+.rm-gk i{width:13px;height:13px;background:var(--g900);transform:rotate(45deg);display:block;margin-bottom:4px}
+.rm-gk strong{font-size:13px;color:var(--g800)}.rm-gk span{font-size:12px;color:var(--muted);line-height:1.3}
+.rm-ghere{border-left:3px solid #c25e00;position:relative;pointer-events:none;z-index:2}
+.rm-ghere em{position:absolute;top:-26px;left:-3px;white-space:nowrap;font-style:normal;font-size:11px;font-weight:800;background:#c25e00;color:#fff;padding:2px 8px;border-radius:6px}
+/* steps */
+.rm-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.rm-step{position:relative;display:flex;flex-direction:column;gap:8px;padding:20px;background:#fff;border:1px solid var(--line);border-top:7px solid var(--g600);border-radius:14px}
+.rm-step.s2{border-top-color:var(--lime)}.rm-step.s3{border-top-color:var(--olive)}.rm-step.s4{border-top-color:var(--g900)}
+.rm-step.here{box-shadow:0 0 0 3px var(--lime)}
+.rm-sh{display:flex;gap:12px;align-items:center}
+.rm-num{flex:0 0 auto;width:44px;height:44px;border-radius:50%;background:var(--g900);color:var(--lime);display:inline-flex;align-items:center;justify-content:center;font-size:22px;font-weight:800}
+.rm-when{margin:0;font-size:13px;font-weight:700;color:var(--g600)}
+.rm-step h3{margin:2px 0 0;font-size:20px;line-height:1.2}
+.rm-step h4{margin:6px 0 0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--g600)}
+.rm-step ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:15px;line-height:1.5}
+.rm-step ul.do{font-weight:600;color:var(--g800)}
+.rm-here{margin:0;font-weight:800;font-size:14px;color:#c25e00}
+.rm-nots{display:flex;flex-wrap:wrap;gap:8px}
+.rm-not{display:inline-flex;gap:6px;align-items:center;padding:4px 12px;border-radius:999px;background:#fbefe9;border:1.5px solid #c2410c;color:#8a2a05;font-weight:700;font-size:13px}
+.rm-step.s1 .rm-not{font-size:16px;padding:6px 16px}
+.rm-gain{margin:4px 0 0;padding:10px 12px;border-radius:10px;background:var(--lime-tint);font-size:14px}
+.rm-help{margin:auto 0 0;padding-top:6px;font-size:13px;color:var(--muted)}
+.rm-flex{margin:0;padding:14px 18px;border-radius:14px;background:var(--lime);color:var(--g900);font-size:16px}
+/* four panels */
+.rm-comic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.rm-panel{margin:0;border:3px solid var(--g900);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.rm-scene{position:relative;height:150px;overflow:hidden;border-bottom:3px solid var(--g900)}
+.rm-scene .cscene{position:absolute;inset:0;width:100%;height:100%}
+.rm-char{position:absolute;left:8px;bottom:4px;display:flex;flex-direction:column;align-items:flex-start;gap:2px}
+.rm-panel figcaption{padding:10px 10px 12px;display:flex;flex-direction:column;gap:8px}
+.rm-pstep{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--g600)}
+.rm-bub{position:relative;margin:6px 0 0;padding:10px 12px;background:#fff;border:2.5px solid var(--g900);border-radius:14px;font-family:'Patrick Hand','Albert Sans',var(--sans);font-size:17px;line-height:1.3;color:var(--g900)}
+.rm-bub::before{content:"";position:absolute;left:22px;top:-13px;border:7px solid transparent;border-bottom:12px solid var(--g900)}
+.rm-bub::after{content:"";position:absolute;left:24px;top:-8px;border:5px solid transparent;border-bottom:9px solid #fff}
+/* tools */
+.rm-groups{display:flex;flex-wrap:wrap;align-items:stretch;gap:10px}
+.rm-tg{flex:1 1 220px;display:flex;flex-direction:column;gap:4px;padding:16px 18px;border-radius:14px;background:#fff;border:1px solid var(--line);border-top:7px solid var(--g600)}
+.rm-tg.chosen{border-top-color:var(--lime)}.rm-tg.test{border-top-color:var(--olive)}
+.rm-tg h3{margin:0;font-size:18px}.rm-tg p{margin:0;font-size:14px;color:var(--ink2);line-height:1.5}
+.rm-tn{font-size:44px;line-height:1;font-weight:800;color:var(--g600)}
+.rm-plus{align-self:center;font-size:30px;font-weight:800;color:var(--g600)}
+.rm-after{margin:0;padding:12px 16px;border-radius:12px;background:var(--lime-tint);border-left:6px solid var(--g600)}
+.rm-cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start}
+.rm-lcard{padding:18px}
+.rm-lcard h3{margin:0 0 8px;font-size:17px}
+.rm-tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.rm-tl li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid #e6e9e8}
+.rm-tl li:last-child{border-bottom:0}
+.rm-tl strong{display:block;font-size:14px;color:var(--g800)}
+.rm-tl small{display:block;font-size:12px;color:var(--muted);line-height:1.3}
+.rm-tl .partner{flex:0 0 auto}
+.rm-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.rm-tab{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 14px;border:1.5px solid var(--line2);border-radius:999px;background:#fff;font-weight:700;font-size:14px}
+.rm-tab svg{border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.18)}
+.rm-tab[aria-pressed="true"]{background:var(--g800);color:var(--lime);border-color:var(--g800)}
+.rm-pc{padding:6px 0;border-bottom:1px solid #e6e9e8}.rm-pc h4{margin:0 0 2px;display:flex;align-items:center;gap:8px;font-size:14px}.rm-pc p{margin:0;font-size:13px;color:var(--ink2);line-height:1.45}
+.rm-close{margin:0;font-weight:700;color:var(--g800)}
+@media (max-width:1000px){.rm-two,.rm-cols{grid-template-columns:minmax(0,1fr)}.rm-comic{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  .rm-gantt{display:none}
+  .rm-steps{display:flex;flex-direction:column;gap:14px;border-left:4px solid var(--g600);margin-left:12px;padding-left:22px}
+  .rm-step::before{content:"";position:absolute;left:-36px;top:26px;width:18px;height:18px;border-radius:50%;background:var(--lime);border:4px solid var(--g800)}
+  .rm-goal{padding:24px 20px}.rm-goal h2{font-size:28px}.rm-stats{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:600px){.rm-comic{grid-template-columns:minmax(0,1fr)}.rm-sec>h2{font-size:25px}.rm-plus{display:none}}
+@media print{
+  @page{size:A4;margin:11mm}
+  html,body{background:#fff!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  header.top,.lnav,.sidescrim,.focusbar,.rm-actions,.rm .phead,.rm-gantt,.rm-screen{display:none!important}
+  .shell{display:block!important}
+  .content,.content main{display:block!important;width:auto!important;max-width:none!important;min-height:0!important;padding:0!important}
+  .rm{gap:16px!important}
+  .rm-printhead{display:flex!important;align-items:center;gap:14px;padding-bottom:8px;border-bottom:4px solid var(--lime)}
+  .rm-printhead img{height:54px;width:auto}
+  .rm-printhead strong{display:block;font-size:24px;color:var(--g800)}.rm-printhead span{font-size:13px;color:var(--muted)}
+  .rm-printonly{display:block!important}
+  .rm-sec>h2{font-size:22px;break-after:avoid}
+  .rm-lead{font-size:13px;line-height:1.5}
+  .rm-goal{padding:20px 22px;gap:8px;break-inside:avoid}.rm-goal h2{font-size:24px}.rm-goal p{font-size:13.5px}
+  .rm-stat{padding:10px 12px}.rm-stat strong{font-size:22px}
+  .rm-two,.rm-cols{grid-template-columns:minmax(0,1fr)!important;gap:12px}
+  .rm-pts span{font-size:12.5px}
+  .rm-steps{display:flex!important;flex-direction:column;gap:12px;border-left:4px solid var(--g600);margin-left:12px;padding-left:22px}
+  .rm-step{padding:14px 16px;break-inside:avoid}
+  .rm-step::before{content:"";position:absolute;left:-36px;top:22px;width:18px;height:18px;border-radius:50%;background:var(--lime);border:4px solid var(--g800)}
+  .rm-step h3{font-size:16px}.rm-step ul{font-size:12.5px}
+  .rm-comic{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .rm-scene{height:120px}.rm-bub{font-size:15px}
+  .rm-panel,.rm-tg,.rm-lcard,.rm-fig,.rm-flex,.rm-after,.rm-keep{break-inside:avoid}
+  .rm-tg p{font-size:12.5px}.rm-tn{font-size:34px}
+  .rm-tl strong{font-size:12.5px}.rm-tl small{font-size:11px}.rm-tl li{padding:4px 0}
+  .rm-keep .tbl2 table{font-size:12.5px}
+  .rm-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}.rm-stat span,.rm-stat small{font-size:11px}
+  .rm-pts{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  .rm-groups{flex-wrap:nowrap}.rm-tg{flex:1 1 0;padding:10px 12px}.rm-plus{font-size:20px}
+  .rm-step{gap:5px}.rm-step ul{gap:2px;font-size:12px}.rm-step h4{margin-top:3px}.rm-nots{gap:6px}
+  .rm-step.s1 .rm-not{font-size:13px;padding:4px 12px}
+  .rm-scene{height:105px}
+  .rm-sec{margin:0}
+  footer.site{break-inside:avoid;margin-top:6px}
+  footer.site .fund{padding:10px 16px}footer.site .fund img{height:34px}
+}
 </style>
 </head>
 <body>
@@ -1010,6 +1161,8 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
 <script src="config/user-journey.js"></script>
 <!-- Editable comic version of the Valdarena use case: see config/comic.js -->
 <script src="config/comic.js"></script>
+<!-- Editable roadmap for the cities (what / how / when): see config/roadmap.js -->
+<script src="config/roadmap.js"></script>
 <script>
 /* Urban-Flow Toolbox Portal – standalone interactive mockup.
    Sample data only. Content based on D3.1 v1 (Chapter 4), Grant Agreement 101239472 and the Urban-Flow GitHub catalogue.
@@ -1404,13 +1557,14 @@ var FOOT = function () {
 
 /* ---------- routing (hash) ---------- */
 function toHash() {
-  var h = S.view === 'comic' ? '#/comic/' + ((S.cch || 0) + 1) + '/' + ((S.cpn || 0) + 1) : S.view === 'tour' ? '#/tour/' + ((S.tour || 0) + 1) : S.view === 'journey' ? '#/journey' : S.view === 'tools' ? '#/tools' : S.view === 'story' ? (S.story ? storyHash() : '#/stories') : S.view === 'tool' || S.view === 'denied' ? '#/module/' + S.toolId : S.view === 'arch' ? '#/architecture' + (S.focus ? '/focus' : '') + (S.sel ? '/' + S.sel : '') : '#/';
+  var h = S.view === 'roadmap' ? '#/roadmap' : S.view === 'comic' ? '#/comic/' + ((S.cch || 0) + 1) + '/' + ((S.cpn || 0) + 1) : S.view === 'tour' ? '#/tour/' + ((S.tour || 0) + 1) : S.view === 'journey' ? '#/journey' : S.view === 'tools' ? '#/tools' : S.view === 'story' ? (S.story ? storyHash() : '#/stories') : S.view === 'tool' || S.view === 'denied' ? '#/module/' + S.toolId : S.view === 'arch' ? '#/architecture' + (S.focus ? '/focus' : '') + (S.sel ? '/' + S.sel : '') : '#/';
   if (location.hash !== h) { try { history.pushState(null, '', h); } catch (e) { location.hash = h; } }
 }
 function fromHash() {
   var h = location.hash.replace(/^#\/?/, '').split('/');
   S.focus = false; S.tsel = null;
   if (h[0] === 'module' && D.byId[h[1]] && !D.byId[h[1]].ext) { S.view = allowed(h[1]) ? 'tool' : 'denied'; S.toolId = h[1]; S.sel = null; }
+  else if (h[0] === 'roadmap') { S.view = 'roadmap'; S.toolId = null; S.sel = null; }
   else if (h[0] === 'comic') { S.view = 'comic'; S.cch = Math.max(0, (parseInt(h[1], 10) || 1) - 1); S.cpn = Math.max(0, (parseInt(h[2], 10) || 1) - 1); if (UC) { S.cch = Math.min(S.cch, UC.chapters.length - 1); S.cpn = Math.min(S.cpn, UC.chapters[S.cch].panels.length - 1); } S.toolId = null; S.sel = null; }
   else if (h[0] === 'tour') { S.view = 'tour'; S.tour = Math.max(0, (parseInt(h[1], 10) || 1) - 1); S.toolId = null; S.sel = null; }
   else if (h[0] === 'tools') { S.view = 'tools'; S.toolId = null; S.sel = null; }
@@ -1423,6 +1577,7 @@ function fromHash() {
 }
 function nav(id) {
   S.focus = false; S.tsel = null; S.ddopen = false;
+  if (id === 'roadmap') { set({ view: 'roadmap', toolId: null, sel: null, menu: false }); toHash(); window.scrollTo(0, 0); return; }
   if (id === 'comic') { set({ view: 'comic', toolId: null, sel: null, menu: false }); toHash(); window.scrollTo(0, 0); return; }
   if (id === 'tour') { set({ view: 'tour', toolId: null, sel: null, menu: false }); toHash(); window.scrollTo(0, 0); return; }
   if (id === 'tools') { set({ view: 'tools', toolId: null, sel: null, menu: false, tsel: null }); toHash(); window.scrollTo(0, 0); return; }
@@ -1465,6 +1620,7 @@ var SI = (function () {
     plug: s('<path d="M9 3v5M15 3v5"/><path d="M7 8h10v3a5 5 0 0 1-10 0z"/><path d="M12 16v5"/>'),
     list: s('<path d="M9 6h12M9 12h12M9 18h12"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="18" r="1.2"/>'),
     shield: s('<path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/>'),
+    route: s('<circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8.2 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.8"/>'),
     chev: '<svg class="schev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>',
     full: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5M4 4l6 6M20 4l-6 6M4 20l6-6M20 20l-6-6"/></svg>',
     lang: '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h10M8 3v2M5 5c1 4 4 7 7 8M11 5c-1 4-4 7-7 8M13 21l4-9 4 9M14.5 18h5"/></svg>'
@@ -1474,6 +1630,8 @@ var SI = (function () {
 function sideNav() {
   var mods = function (ids) { return ids.filter(function (id) { var e = D.byId[id]; return e && !e.ext && !e.mod; }); };
   return [
+    { sec: 'For the cities' },
+    { view: 'roadmap', icon: 'route', label: 'Roadmap for the cities' },
     { sec: 'Tools' },
     { id: 'epart', icon: 'people', label: 'e-Participation' },
     { grp: 'ldt', icon: 'twin', label: 'Local Digital Twin', cities: ['Valencia', 'Florence', 'Tampere'] },
@@ -1546,6 +1704,7 @@ function vHeader() {
     '<div class="brandcell"><button type="button" class="brand" data-act="nav" data-arg="home" aria-label="Urban-Flow Toolbox home"><img src="assets/urban-flow-logo-white.png" alt=""><span class="sub hidem">Toolbox</span></button>' +
     '<button type="button" class="sqbtn" data-act="menu" aria-label="' + (mini ? 'Expand' : 'Collapse') + ' the tools menu" aria-expanded="' + !mini + '">' + ICON.menu + '</button></div>' +
     '<button type="button" class="toplink hidem" data-act="nav" data-arg="arch"' + (S.view === 'arch' ? ' aria-current="page"' : '') + ' title="Urban-Flow reference architecture"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="5" rx="1.5"/><rect x="3" y="10.5" width="8" height="4" rx="1.2"/><rect x="13" y="10.5" width="8" height="4" rx="1.2"/><rect x="3" y="17" width="18" height="4" rx="1.2"/></svg><span class="tlk">Architecture</span></button>' +
+    '<button type="button" class="toplink hidem" data-act="nav" data-arg="roadmap"' + (S.view === 'roadmap' ? ' aria-current="page"' : '') + ' title="Roadmap for the cities"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8.2 18H15a3 3 0 0 0 0-6H9a3 3 0 0 1 0-6h6.8"/></svg><span class="tlk">Roadmap</span></button>' +
     '<button type="button" class="toplink hidem" data-act="nav" data-arg="comic"' + (S.view === 'comic' ? ' aria-current="page"' : '') + ' title="Urban-Flow Use Case"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M17 14.2c2.4.3 4 2.2 4 4.8"/></svg><span class="tlk">Use Case</span></button>' +
     '<div style="flex:1 1 10px"></div>' +
     '<button type="button" class="sqbtn hidem" data-act="full" aria-label="Full screen" title="Full screen">' + SI.full + '</button>' +
@@ -1569,6 +1728,7 @@ function vHome() {
     '<p class="big">URBAN-<b>FLOW</b></p>' +
     '<h1>Local Digital Twins for liveable, climate-neutral cities</h1>' +
     '<p class="lead">Connect city data, measure what matters, simulate measures before building them and decide together with citizens. One Toolbox, shared by the pilot cities (only during the test phase), with the tools each city needs.</p>' +
+    '<div><button type="button" class="btn primary" data-act="nav" data-arg="roadmap">' + SI.route + 'Roadmap for the cities: what, how and when</button></div>' +
     '</div>' +
     '<div class="art" aria-hidden="true"><div class="blob"></div><div class="sun"></div><div class="badge2"><img src="assets/urban-flow-logo-stacked.png" alt=""><span><strong>3 pilot cities</strong>Valencia · Florence · Tampere</span></div></div></section>' +
 
@@ -2638,7 +2798,8 @@ var CLOOK = {
   chiara: { skin: '#e9b48f', hair: '#2b1d16', top: '#1d5778', hairPath: 'M18 40 C14 18 30 8 44 10 C58 8 72 18 68 42 L68 52 L60 52 L60 30 C50 26 36 26 26 30 L26 52 L18 52 Z' },
   davide: { skin: '#c98f6a', hair: '#4a3020', top: '#1A1B33', hairPath: 'M22 30 C22 14 64 12 64 30 C56 24 32 24 22 30 Z', glasses: true },
   rosa: { skin: '#f0c4a2', hair: '#8a3b1e', top: '#ffffff', apron: true, hairPath: 'M16 36 C10 14 30 4 43 8 C60 2 78 16 70 38 C74 46 66 50 62 46 C60 30 26 30 24 46 C18 50 12 44 16 36 Z' },
-  marco: { skin: '#a8714f', hair: '#1e1e1e', top: '#e2771f', cap: true, hairPath: 'M24 32 C24 24 62 24 62 32 Z' }
+  marco: { skin: '#a8714f', hair: '#1e1e1e', top: '#e2771f', cap: true, hairPath: 'M24 32 C24 24 62 24 62 32 Z' },
+  luca: { skin: '#e2b08a', hair: '#3a2a1f', top: '#33564F', hairPath: 'M20 34 C18 14 36 8 46 10 C62 10 70 20 66 36 C58 26 34 24 20 34 Z' }
 };
 function comicAvatar(look, size) {
   var L = CLOOK[look]; if (!L) return '';
@@ -2792,9 +2953,100 @@ function comicSchedule() {
   }, 2600 + txt.length * 42);
 }
 
+/* ---------- roadmap for the cities (content from config/roadmap.js) ---------- */
+var RM = window.UF_ROADMAP || null;
+var RM_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+function rmToolSplit(s) { var m = String(s).match(/^(.*?)\s*\((.*?)\)\s*(.*)$/); return m ? { n: m[1], d: m[2] } : { n: String(s), d: '' }; }
+function rmList(a, cls) { return a && a.length ? '<ul' + (cls ? ' class="' + cls + '"' : '') + '>' + a.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : ''; }
+function rmGantt() {
+  var T = RM.timeline, n = T.months, y0 = +T.start.slice(0, 4), m0 = +T.start.slice(5, 7) - 1;
+  var cells = [], years = [], i;
+  for (i = 0; i < n; i++) {
+    var mm = (m0 + i) % 12, yy = y0 + Math.floor((m0 + i) / 12);
+    cells.push('<span class="rm-gm" style="grid-column:' + (i + 2) + ';grid-row:2">' + RM_MONTHS[mm] + '</span>');
+    if (!years.length || years[years.length - 1].y !== yy) years.push({ y: yy, from: i, to: i + 1 }); else years[years.length - 1].to = i + 1;
+  }
+  var yh = years.map(function (g) { return '<span class="rm-gy" style="grid-column:' + (g.from + 2) + ' / ' + (g.to + 2) + ';grid-row:1">' + g.y + '</span>'; }).join('');
+  var rows = RM.steps.map(function (s, k) {
+    var b = s.bar || [0, 1];
+    return '<span class="rm-gl" style="grid-row:' + (k + 3) + '"><b>' + s.n + '</b> ' + esc(s.name) + '<small>' + esc(s.when.replace(/^From /, '')) + '</small></span>' +
+      '<span class="rm-gb s' + s.n + '" style="grid-column:' + (b[0] + 2) + ' / ' + (b[1] + 2) + ';grid-row:' + (k + 3) + '"></span>';
+  }).join('');
+  var mrow = RM.steps.length + 3;
+  var marks = (T.marks || []).map(function (m) {
+    var side = m.m >= n - 3 ? ' end' : '';
+    return '<span class="rm-gk' + side + '" style="grid-column:' + (m.m + 2) + ';grid-row:' + mrow + '"><i></i><strong>' + esc(m.label) + '</strong><span>' + esc(m.text) + '</span></span>';
+  }).join('');
+  var here = T.here ? '<span class="rm-ghere" style="grid-column:' + (T.here.m + 2) + ';grid-row:1 / ' + (mrow + 1) + '"><em>' + esc(T.here.label) + '</em></span>' : '';
+  return '<div class="rm-gantt" aria-hidden="true" style="grid-template-columns:150px repeat(' + n + ',minmax(0,1fr))">' + yh + cells.join('') + rows + marks + here + '</div>';
+}
+function rmStep(s) {
+  var not = (s.cityNot || []).map(function (x) { return '<span class="rm-not"><b aria-hidden="true">✕</b> ' + esc(x) + '</span>'; }).join('');
+  return '<li class="rm-step s' + s.n + (s.here ? ' here' : '') + '">' +
+    '<div class="rm-sh"><span class="rm-num">' + s.n + '</span><div><p class="rm-when">' + esc(s.when) + (s.months ? ' · ' + esc(s.months) : '') + '</p><h3>' + esc(s.name) + ': ' + esc(s.headline) + '</h3></div></div>' +
+    (s.here ? '<p class="rm-here">▼ We are here</p>' : '') +
+    (not ? '<div class="rm-nots">' + not + '</div>' : '') +
+    '<h4>What happens</h4>' + rmList(s.what) +
+    '<h4>What your city does</h4>' + rmList(s.cityDoes, 'do') +
+    (s.gain ? '<p class="rm-gain"><strong>What you gain.</strong> ' + esc(s.gain) + '</p>' : '') +
+    '<p class="rm-help"><strong>Who helps:</strong> ' + esc(s.help) + '</p></li>';
+}
+function rmComic() {
+  var cast = { luca: 'luca', chiara: 'chiara', davide: 'davide' };
+  return '<div class="rm-comic">' + RM.comic.map(function (p, k) {
+    return '<figure class="rm-panel"><div class="rm-scene">' + comicScene(p.scene) + '<div class="rm-char">' + comicAvatar(cast[p.who] || 'chiara', 84) + '<span class="cname">' + esc(p.name) + ' · ' + esc(p.role) + '</span></div></div>' +
+      '<figcaption><span class="rm-pstep">' + esc(p.step) + '</span><blockquote class="rm-bub">' + esc(p.text) + '</blockquote></figcaption></figure>';
+  }).join('') + '</div>';
+}
+function rmTools() {
+  var T = RM.tools, M = Array.isArray(CFG.cityMatrix) ? CFG.cityMatrix : [];
+  var cities = ['Valencia', 'Florence', 'Tampere'], cur = S.rmcity || (cities.indexOf(S.city) >= 0 ? S.city : 'Valencia');
+  var groups = T.groups.map(function (g) {
+    return '<div class="rm-tg ' + g.id + '"><span class="rm-tn">' + g.n + '</span><h3>' + esc(g.t) + '</h3><p>' + esc(g.d) + '</p></div>';
+  }).join('<span class="rm-plus" aria-hidden="true">+</span>');
+  var sum = T.groups.reduce(function (a, g) { return a + g.n; }, 0);
+  var sys = T.system.map(function (t) { return '<li><span><strong>' + esc(t.n) + '</strong><small>' + esc(t.d) + '</small></span><span class="partner">' + esc(t.p) + '</span></li>'; }).join('');
+  var tabs = cities.map(function (c) { var on = c === cur; return '<button type="button" class="rm-tab' + (on ? ' on' : '') + '" data-act="rmcity" data-arg="' + c + '" aria-pressed="' + on + '">' + cflag(c) + esc(c) + '</button>'; }).join('');
+  var list = M.filter(function (r) { return /^marketplace/i.test(r.group || '') && (r.cities || []).indexOf(cur) >= 0; }).map(function (r) {
+    var p = rmToolSplit(r.tool);
+    return '<li><span><strong>' + esc(p.n) + '</strong>' + (p.d ? '<small>' + esc(p.d) + '</small>' : '') + '</span><span class="partner">' + esc(r.partner) + '</span></li>';
+  }).join('');
+  var all3 = cities.map(function (c) {
+    var l = M.filter(function (r) { return /^marketplace/i.test(r.group || '') && (r.cities || []).indexOf(c) >= 0; }).map(function (r) { return rmToolSplit(r.tool).n; });
+    return '<div class="rm-pc"><h4>' + cflag(c) + esc(c) + ' · ' + l.length + ' tools</h4><p>' + esc(l.join(' · ')) + '</p></div>';
+  }).join('');
+  return '<section class="rm-sec" aria-labelledby="rm-t"><h2 id="rm-t">' + esc(T.title) + '</h2><p class="rm-lead">' + esc(T.lead) + ' <strong>' + T.groups.map(function (g) { return g.n; }).join(' + ') + ' = ' + sum + '</strong></p>' +
+    '<div class="rm-groups">' + groups + '</div><p class="rm-after">' + esc(T.after) + '</p>' +
+    '<div class="rm-cols"><div class="card rm-lcard"><h3>' + esc(T.systemTitle) + '</h3><ul class="rm-tl">' + sys + '</ul></div>' +
+    '<div class="card rm-lcard rm-screen"><h3>' + esc(T.marketTitle) + '</h3><div class="rm-tabs" role="group" aria-label="Pilot city">' + tabs + '</div><p class="small" style="margin:6px 0 8px">' + esc(T.marketNote) + '</p><ul class="rm-tl">' + list + '</ul></div>' +
+    '<div class="card rm-lcard rm-printonly"><h3>' + esc(T.marketTitle) + ' each city</h3>' + all3 + '<p class="small" style="margin:6px 0 0">' + esc(T.marketNote) + '</p></div></div></section>';
+}
+function vRoadmap() {
+  if (!RM) return '<div role="alert" class="note">The roadmap is not configured: config/roadmap.js was not loaded.</div>';
+  var G = RM.goal, B = RM.toolbox;
+  var stats = G.stats.map(function (s) { return '<div class="rm-stat"><strong>' + esc(s.v) + '</strong><span>' + esc(s.l) + '</span><small>' + esc(s.s) + '</small></div>'; }).join('');
+  var pts = B.points.map(function (p) { return '<li><strong>' + esc(p.t) + '</strong><span>' + esc(p.d) + '</span></li>'; }).join('');
+  var lay = B.layers.map(function (l) { return '<div class="rm-lay ' + l.id + '"><strong>' + esc(l.t) + '</strong><span>' + esc(l.d) + '</span></div>'; }).join('');
+  var flow = B.flow.map(function (f, k) { return '<span class="rm-fl' + (k === B.flow.length - 1 ? ' last' : '') + '"><b>' + (k + 1) + '</b> ' + esc(f) + '</span>'; }).join('<span class="rm-fa" aria-hidden="true">→</span>');
+  var dates = RM.dates.map(function (d) { return '<tr><th scope="row">' + esc(d.when) + '</th><td>' + esc(d.what) + '</td><td>' + esc(d.who) + '</td></tr>'; }).join('');
+  return '<div class="stack rm" style="gap:26px">' +
+    '<div class="rm-printhead"><img src="assets/urban-flow-logo-stacked.png" alt="Urban-Flow"><div><strong>' + esc(RM.title) + '</strong><span>' + esc(RM.subtitle) + '</span></div></div>' +
+    '<header class="phead"><div class="ph-l"><h1>' + esc(RM.title) + '</h1></div>' +
+    '<div class="wrap rm-actions" style="gap:10px">' + (RM.pdf ? '<a class="btn lime" href="' + esc(RM.pdf) + '" download>Download the PDF summary</a>' : '') + '<button type="button" class="btn" data-act="print">Print / save as PDF</button></div>' +
+    '<nav class="pcrumb" aria-label="Breadcrumb"><button type="button" data-act="nav" data-arg="home">Home</button><span aria-hidden="true">›</span><span aria-current="page">' + esc(RM.title) + '</span></nav></header>' +
+    '<section class="rm-goal" aria-labelledby="rm-g"><p class="eyebrow">' + esc(G.kicker) + '</p><h2 id="rm-g">' + esc(G.headline) + '</h2><p>' + esc(G.text) + '</p><div class="rm-stats">' + stats + '</div></section>' +
+    '<section class="rm-sec" aria-labelledby="rm-b"><h2 id="rm-b">' + esc(B.title) + '</h2><div class="rm-two"><div><p class="rm-lead">' + esc(B.lead) + '</p><ul class="rm-pts">' + pts + '</ul></div>' +
+    '<figure class="rm-fig" aria-label="' + esc(B.layersTitle) + '"><figcaption>' + esc(B.layersTitle) + '</figcaption><div class="rm-lays"><div class="rm-lmain">' + lay + '</div><div class="rm-liam"><strong>' + esc(B.iam.t) + '</strong><span>' + esc(B.iam.d) + '</span></div></div><p class="rm-flowt">' + esc(B.flowTitle) + '</p><div class="rm-flow">' + flow + '</div></figure></div></section>' +
+    '<section class="rm-sec" aria-labelledby="rm-s"><h2 id="rm-s">' + esc(RM.stepsTitle) + '</h2><p class="rm-lead">' + esc(RM.stepsLead) + '</p>' + rmGantt() + '<ol class="rm-steps">' + RM.steps.map(rmStep).join('') + '</ol><p class="rm-flex"><strong>We are flexible.</strong> ' + esc(RM.flexible) + '</p></section>' +
+    '<section class="rm-sec rm-keep" aria-labelledby="rm-c"><h2 id="rm-c">' + esc(RM.comicTitle) + '</h2>' + rmComic() + '</section>' +
+    rmTools() +
+    '<section class="rm-sec rm-keep" aria-labelledby="rm-d"><h2 id="rm-d">' + esc(RM.datesTitle) + '</h2><div class="tbl2 card"><table><thead><tr><th scope="col">When</th><th scope="col">What happens</th><th scope="col">Who</th></tr></thead><tbody>' + dates + '</tbody></table></div><p class="rm-close">' + esc(RM.closing) + '</p></section>' +
+    '</div>';
+}
+
 function render() {
   if (!S.role) { app.innerHTML = vLogin(); document.title = 'Sign in · Urban-Flow Toolbox (mockup)'; return; }
-  var body = S.view === 'comic' ? vComic() : S.view === 'tour' ? vTour() : S.view === 'journey' ? vJourney() : S.view === 'tools' ? vToolsDir() : S.view === 'story' ? vStory() : S.view === 'tool' ? vTool() : S.view === 'denied' ? vDenied() : S.view === 'arch' ? vArch() : vHome();
+  var body = S.view === 'roadmap' ? vRoadmap() : S.view === 'comic' ? vComic() : S.view === 'tour' ? vTour() : S.view === 'journey' ? vJourney() : S.view === 'tools' ? vToolsDir() : S.view === 'story' ? vStory() : S.view === 'tool' ? vTool() : S.view === 'denied' ? vDenied() : S.view === 'arch' ? vArch() : vHome();
   var warn = CFG_ERR.length && (S.view === 'arch' || S.view === 'home') ? '<div role="alert" style="margin-bottom:18px;padding:14px 16px;border-radius:12px;background:#fbefd6;color:#5a3100;border:1px solid #e9c98a"><strong>Configuration issues (config/architecture-tools.js)</strong><ul style="margin:6px 0 0;padding-left:18px">' + CFG_ERR.map(function (m) { return '<li>' + esc(m) + '</li>'; }).join('') + '</ul></div>' : '';
   if (S.view === 'arch' && S.focus) {
     app.innerHTML = '<nav class="focusbar" aria-label="Focus view controls"><button type="button" class="fbtn" data-act="focus" title="Back to the normal view (Esc)">' + SI.full + '<span>Normal view</span></button><button type="button" class="fbtn lime" data-act="nav" data-arg="home" title="Go to the Toolbox home">' + SI.home + '<span>Toolbox home</span></button></nav><main class="focusmain">' + warn + body + '</main>' + (S.sel && !isMpBlock(S.sel) ? vPanel() : '') + (S.layerInfo ? vLayerModal() : '') + (S.tsel ? vToolModal() : '') + (S.video ? vVideo() : '');
@@ -2805,7 +3057,7 @@ function render() {
   if (S.view === 'story') ANIM_CH = S.story + Math.min(S.ch, 999);
   if (S.view === 'tour') { fitMap(app.querySelector('.tleft')); fitText(app.querySelector('.tright')); requestAnimationFrame(drawTourLinks); }
   if (S.view === 'comic') { fitMap(app.querySelector('.carch')); requestAnimationFrame(drawComicLinks); }
-  document.title = (S.view === 'comic' ? 'Valdarena – the story · ' : '') + (S.view === 'tour' ? 'Use case: Valdarena · ' : '') + (S.view === 'journey' ? 'Municipality user journey · ' : '') + (S.view === 'tools' ? 'Tools & partners · ' : '') + (S.view === 'story' ? (S.story ? 'Use case: ' + (storyById(S.story) || {}).city + ' · ' : 'Use cases · ') : '') + (S.view === 'tool' ? D.byId[S.toolId].n + ' · ' : S.view === 'arch' ? 'Architecture · ' : '') + 'Urban-Flow Toolbox (mockup)';
+  document.title = (S.view === 'roadmap' ? 'Roadmap for the cities · ' : '') + (S.view === 'comic' ? 'Valdarena – the story · ' : '') + (S.view === 'tour' ? 'Use case: Valdarena · ' : '') + (S.view === 'journey' ? 'Municipality user journey · ' : '') + (S.view === 'tools' ? 'Tools & partners · ' : '') + (S.view === 'story' ? (S.story ? 'Use case: ' + (storyById(S.story) || {}).city + ' · ' : 'Use cases · ') : '') + (S.view === 'tool' ? D.byId[S.toolId].n + ' · ' : S.view === 'arch' ? 'Architecture · ' : '') + 'Urban-Flow Toolbox (mockup)';
 }
 
 /* ---------- events ---------- */
@@ -2821,6 +3073,8 @@ app.addEventListener('click', function (ev) {
     case 'city': try { sessionStorage.setItem('uf-city', arg); } catch (e) {} set({ city: arg }); break;
     case 'menu': if (window.innerWidth <= 900) { lastFocus = el; set({ menu: !S.menu }); var f = app.querySelector('.lnav .sitem'); if (f && S.menu) f.focus(); } else { set({ sideMini: !sideMini() }); } break;
     case 'sgrp': var og = copy(S.open); var it0 = sideNav().filter(function (x) { return x.grp === arg; })[0]; if (sideMini() && window.innerWidth > 900) { og[arg] = true; set({ open: og, sideMini: false }); } else { og[arg] = !grpOpen(it0); set({ open: og }); } var gb = app.querySelector('[data-act="sgrp"][data-arg="' + arg + '"]'); if (gb) gb.focus(); break;
+    case 'print': try { window.print(); } catch (e) {} break;
+    case 'rmcity': set({ rmcity: arg }); var rb2 = app.querySelector('[data-act="rmcity"][data-arg="' + arg + '"]'); if (rb2) rb2.focus(); break;
     case 'full': try { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen(); } catch (e) {} break;
     case 'lang': set({ lang: LANGS[(LANGS.indexOf(S.lang) + 1) % LANGS.length] }); var lb = app.querySelector('[data-act="lang"]'); if (lb) lb.focus(); break;
     case 'menuclose': set({ menu: false }); if (lastFocus && document.body.contains(lastFocus)) lastFocus.focus(); break;
