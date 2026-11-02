@@ -1144,6 +1144,7 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
   .rm-step{gap:5px}.rm-step ul{gap:2px;font-size:12px}.rm-step h4{margin-top:3px}.rm-nots{gap:6px}
   .rm-step.s1 .rm-not{font-size:13px;padding:4px 12px}
   .rm-scene{height:105px}
+  .rm-cols{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start}.rm-lcard{padding:12px}
   .rm-sec{margin:0}
   footer.site{break-inside:avoid;margin-top:6px}
   footer.site .fund{padding:10px 16px}footer.site .fund img{height:34px}
@@ -3000,26 +3001,19 @@ function rmComic() {
 }
 function rmTools() {
   var T = RM.tools, M = Array.isArray(CFG.cityMatrix) ? CFG.cityMatrix : [];
-  var cities = ['Valencia', 'Florence', 'Tampere'], cur = S.rmcity || (cities.indexOf(S.city) >= 0 ? S.city : 'Valencia');
   var groups = T.groups.map(function (g) {
     return '<div class="rm-tg ' + g.id + '"><span class="rm-tn">' + g.n + '</span><h3>' + esc(g.t) + '</h3><p>' + esc(g.d) + '</p></div>';
   }).join('<span class="rm-plus" aria-hidden="true">+</span>');
   var sum = T.groups.reduce(function (a, g) { return a + g.n; }, 0);
   var sys = T.system.map(function (t) { return '<li><span><strong>' + esc(t.n) + '</strong><small>' + esc(t.d) + '</small></span><span class="partner">' + esc(t.p) + '</span></li>'; }).join('');
-  var tabs = cities.map(function (c) { var on = c === cur; return '<button type="button" class="rm-tab' + (on ? ' on' : '') + '" data-act="rmcity" data-arg="' + c + '" aria-pressed="' + on + '">' + cflag(c) + esc(c) + '</button>'; }).join('');
-  var list = M.filter(function (r) { return /^marketplace/i.test(r.group || '') && (r.cities || []).indexOf(cur) >= 0; }).map(function (r) {
+  var seen = {}, list = M.filter(function (r) { if (!/^marketplace/i.test(r.group || '') || seen[r.tool]) return false; seen[r.tool] = 1; return true; }).map(function (r) {
     var p = rmToolSplit(r.tool);
     return '<li><span><strong>' + esc(p.n) + '</strong>' + (p.d ? '<small>' + esc(p.d) + '</small>' : '') + '</span><span class="partner">' + esc(r.partner) + '</span></li>';
-  }).join('');
-  var all3 = cities.map(function (c) {
-    var l = M.filter(function (r) { return /^marketplace/i.test(r.group || '') && (r.cities || []).indexOf(c) >= 0; }).map(function (r) { return rmToolSplit(r.tool).n; });
-    return '<div class="rm-pc"><h4>' + cflag(c) + esc(c) + ' · ' + l.length + ' tools</h4><p>' + esc(l.join(' · ')) + '</p></div>';
   }).join('');
   return '<section class="rm-sec" aria-labelledby="rm-t"><h2 id="rm-t">' + esc(T.title) + '</h2><p class="rm-lead">' + esc(T.lead) + ' <strong>' + T.groups.map(function (g) { return g.n; }).join(' + ') + ' = ' + sum + '</strong></p>' +
     '<div class="rm-groups">' + groups + '</div><p class="rm-after">' + esc(T.after) + '</p>' +
     '<div class="rm-cols"><div class="card rm-lcard"><h3>' + esc(T.systemTitle) + '</h3><ul class="rm-tl">' + sys + '</ul></div>' +
-    '<div class="card rm-lcard rm-screen"><h3>' + esc(T.marketTitle) + '</h3><div class="rm-tabs" role="group" aria-label="Pilot city">' + tabs + '</div><p class="small" style="margin:6px 0 8px">' + esc(T.marketNote) + '</p><ul class="rm-tl">' + list + '</ul></div>' +
-    '<div class="card rm-lcard rm-printonly"><h3>' + esc(T.marketTitle) + ' each city</h3>' + all3 + '<p class="small" style="margin:6px 0 0">' + esc(T.marketNote) + '</p></div></div></section>';
+    '<div class="card rm-lcard"><h3>' + esc(T.marketTitle) + '</h3><p class="small" style="margin:0 0 8px">' + esc(T.marketNote) + '</p><ul class="rm-tl">' + list + '</ul></div>' + '</div></section>';
 }
 function vRoadmap() {
   if (!RM) return '<div role="alert" class="note">The roadmap is not configured: config/roadmap.js was not loaded.</div>';

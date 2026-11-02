@@ -27,7 +27,7 @@ window.UF_ROADMAP = {
     "text": "We get there in four steps. In the first one, ENG and the technical partners do the work: your city does not install anything.",
     "stats": [
       { "v": "3", "l": "pilot cities", "s": "Valencia · Florence · Tampere" },
-      { "v": "21", "l": "tools in each city", "s": "9 system tools + 12 Marketplace tools" },
+      { "v": "26", "l": "tools in the Toolbox", "s": "9 system tools + 17 Marketplace tools" },
       { "v": "April 2028", "l": "your own Toolbox, ready", "s": "Month 28 of the project (milestone MS6)" }
     ]
   },
@@ -109,11 +109,10 @@ window.UF_ROADMAP = {
   ],
   "tools": {
     "title": "Which tools will be in your Toolbox?",
-    "lead": "The final list is a mix of three kinds of tools. For each city it adds up to 21 tools.",
+    "lead": "The Toolbox brings together 26 tools. They are a mix of three kinds: system tools, tools chosen at the General Assembly in Florence, and tools that must be tested to meet the Grant Agreement.",
     "groups": [
       { "id": "system", "n": 9, "t": "System tools", "d": "The architecture needs them. Without them the Toolbox could not work. They are the same for every city." },
-      { "id": "chosen", "n": 8, "t": "Tools you chose", "d": "Tools the cities asked for at the General Assembly in Florence (28–29 October 2026). Tools you are already interested in." },
-      { "id": "test", "n": 4, "t": "Tools to test", "d": "The Grant Agreement says every tool must be tested at least once. Some tools are in the list for this reason." }
+      { "id": "chosen", "n": 17, "t": "Marketplace tools", "d": "Tools the cities asked for at the General Assembly in Florence (28–29 October 2026), plus tools to test, because the Grant Agreement says every tool must be tested at least once." }
     ],
     "after": "After the testing window you choose again: only the tools that met your expectations go to your own Toolbox. The system tools are always part of it.",
     "systemTitle": "The 9 system tools (same in every city)",
@@ -128,8 +127,8 @@ window.UF_ROADMAP = {
       { "n": "Chimera and Data Mashup Editor", "p": "CEFRIEL, ENG", "d": "Prepares and harmonises incoming data." },
       { "n": "Minimal Interoperability Mechanisms (MIMs)", "p": "OASC", "d": "Common rules, so that systems can talk to each other." }
     ],
-    "marketTitle": "Marketplace tools tested in",
-    "marketNote": "12 tools: 8 chosen at the General Assembly and 4 added to test the Grant Agreement."
+    "marketTitle": "The 17 Marketplace tools",
+    "marketNote": "How many of these tools each city will test is not decided yet. We will agree it together with each city."
   },
   "datesTitle": "Key dates for the cities",
   "dates": [
