@@ -36,7 +36,7 @@ window.UF_ROADMAP = {
     "lead": "The Urban-Flow Toolbox is a web portal that brings together all the Urban-Flow components. In one place you connect city data, measure what matters, simulate measures before building them, and decide together with citizens.",
     "points": [
       { "t": "One web portal for all tools", "d": "Each tool has its own page: what it does, who built it and which cities use it." },
-      { "t": "One login for each city user", "d": "Each person sees only what they are allowed to see." },
+      { "t": "One login for all the tools", "d": "A single login, managed by a central Keycloak, gives access to every tool. Each user has a specific role and sees only what that role allows." },
       { "t": "Same base, different tools", "d": "The shared base is the same for every city. For each topic (heat, energy, mobility, air) each city chooses the tools it needs." }
     ],
     "layersTitle": "The Toolbox in one picture",
@@ -46,7 +46,7 @@ window.UF_ROADMAP = {
       { "id": "base", "t": "Shared base", "d": "Indicators, rules, data and data sharing. The same for every city." },
       { "id": "src", "t": "Your city data", "d": "Sensors, open data, city systems, maps" }
     ],
-    "iam": { "t": "Login and permissions", "d": "One login. Each person sees only what they are allowed to see." },
+    "iam": { "t": "One central login (Keycloak)", "d": "One login opens all the tools. Users and roles are set once, in one place." },
     "flowTitle": "Data travels from the bottom to the top",
     "flow": ["Collect", "Store", "Measure", "Analyse", "Decide"]
   },
