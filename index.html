@@ -1066,6 +1066,7 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
 .rm-nots{display:flex;flex-wrap:wrap;gap:8px}
 .rm-not{display:inline-flex;gap:6px;align-items:center;padding:4px 12px;border-radius:999px;background:#fbefe9;border:1.5px solid #c2410c;color:#8a2a05;font-weight:700;font-size:13px}
 .rm-step.s1 .rm-not{font-size:16px;padding:6px 16px}
+.rm-tip{margin:4px 0 0;padding:10px 12px;border-radius:10px;background:#fff;border:1.5px dashed var(--g600);font-size:14px}
 .rm-gain{margin:4px 0 0;padding:10px 12px;border-radius:10px;background:var(--lime-tint);font-size:14px}
 .rm-help{margin:auto 0 0;padding-top:6px;font-size:13px;color:var(--muted)}
 .rm-flex{margin:0;padding:14px 18px;border-radius:14px;background:var(--lime);color:var(--g900);font-size:16px}
@@ -2989,6 +2990,7 @@ function rmStep(s) {
     (not ? '<div class="rm-nots">' + not + '</div>' : '') +
     '<h4>What happens</h4>' + rmList(s.what) +
     '<h4>What your city does</h4>' + rmList(s.cityDoes, 'do') +
+    (s.tip ? '<p class="rm-tip"><strong>Tip.</strong> ' + esc(s.tip) + '</p>' : '') +
     (s.gain ? '<p class="rm-gain"><strong>What you gain.</strong> ' + esc(s.gain) + '</p>' : '') +
     '<p class="rm-help"><strong>Who helps:</strong> ' + esc(s.help) + '</p></li>';
 }

@@ -10,7 +10,7 @@
  *
  * goal      headline, text and three numbers shown at the top
  * toolbox   what the Toolbox is: lead, points[], layers[] (the picture), flow[] (how data travels)
- * steps[]   the four steps. Fields: n, bar [first month, last month + 1] on the timeline (0 = October 2026), name, when, months, headline, what[], cityDoes[], cityNot[], help, here (true = "We are here")
+ * steps[]   the four steps. Fields: n, bar [first month, last month + 1] on the timeline (0 = October 2026), name, when, months, headline, what[], cityDoes[], cityNot[]tip (optional), help, here (true = "We are here")
  * comic[]   the four-panel story: who (luca | chiara | davide), name, role, scene (office | map | meeting | street), step, text
  * tools     how the final list of tools is made: groups[] (system, chosen, test) and the list of system tools.
  *           The Marketplace tools of each city are read from "cityMatrix" in config/architecture-tools.js.
@@ -65,7 +65,8 @@ window.UF_ROADMAP = {
     {
       "n": 2, "bar": [3, 9], "name": "Testing window", "when": "January – June 2027", "months": "Months 13–18", "here": false,
       "headline": "You test the tools",
-      "what": ["The cities try the Marketplace tools and the other components in one shared environment.", "Connect your data and let the tools run their analyses. Try more than one tool for the same topic."],
+      "what": ["The cities try the Marketplace tools and the other components in one shared environment.", "Connect your data and let the tools run their analyses."],
+      "tip": "Try more than one tool for the same topic.",
       "cityDoes": ["Connect your data and play with the Toolbox.", "Tell us what you see."],
       "cityNot": ["No commitment to adopt a tool", "No installation", "No daily use in operations"],
       "gain": "Alternative tools from other partners, and maybe a better option for your final Toolbox.",
