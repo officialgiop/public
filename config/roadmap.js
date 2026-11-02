@@ -67,7 +67,7 @@ window.UF_ROADMAP = {
       "headline": "You test the tools",
       "what": ["The cities try the Marketplace tools and the other components in one shared environment.", "Connect your data and let the tools run their analyses. Try more than one tool for the same topic."],
       "cityDoes": ["Connect your data and play with the Toolbox.", "Tell us what you see."],
-      "cityNot": ["No commitment to adopt a tool", "No installation, no servers", "No daily use in operations"],
+      "cityNot": ["No commitment to adopt a tool", "No installation", "No daily use in operations"],
       "gain": "Alternative tools from other partners, and maybe a better option for your final Toolbox.",
       "help": "The technical partners support you during the whole testing window"
     },
@@ -102,7 +102,7 @@ window.UF_ROADMAP = {
   },
   "comicTitle": "The four steps in four panels",
   "comic": [
-    { "who": "luca", "name": "Luca", "role": "ENG", "scene": "office", "step": "Step 1 · Setup", "text": "We set up one test environment for all three cities. You install nothing. No servers, no extra work for your IT team." },
+    { "who": "luca", "name": "Luca", "role": "ENG", "scene": "office", "step": "Step 1 · Setup", "text": "We set up one test environment for all three cities. You install nothing, so there is no extra work for your IT team." },
     { "who": "chiara", "name": "Chiara", "role": "City officer", "scene": "map", "step": "Step 2 · Testing window", "text": "From January to June I connect our data and try the tools. I can try two tools for the same topic. It is a test, not a commitment." },
     { "who": "davide", "name": "Davide", "role": "City IT team", "scene": "meeting", "step": "Step 3 · Feedback", "text": "In June we say what works and what does not, tool by tool. The owners improve their tools. We keep the ones we like." },
     { "who": "chiara", "name": "Chiara", "role": "City officer", "scene": "street", "step": "Step 4 · Implement", "text": "From mid-2027 we install our own Toolbox in the municipality, with help from the technical partners. In April 2028 it is ready." }
