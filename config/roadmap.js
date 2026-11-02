@@ -59,7 +59,7 @@ window.UF_ROADMAP = {
       "headline": "We set up the test environment",
       "what": ["ENG and the technical partners build one shared test environment for the three cities. It is installed on servers of the Lisbon Council.", "The test environment opens in January 2027. From January, all the tools are added step by step."],
       "cityDoes": ["Nothing to install. No servers.", "Your only part: share your requirements and user stories (November) and answer a few technical questions (December)."],
-      "cityNot": ["No installation", "No servers"],
+      "cityNot": ["No installation"],
       "help": "ENG and the technical partners"
     },
     {
