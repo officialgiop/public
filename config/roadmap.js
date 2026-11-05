@@ -54,7 +54,7 @@ window.UF_ROADMAP = {
     {
       "n": 1, "bar": [0, 3], "name": "Setup", "when": "October – December 2026", "months": "Months 10–12", "here": true,
       "headline": "We set up the shared test environment",
-      "what": ["ENG and the technical partners build one shared test environment for the three cities. It is installed on servers of the Lisbon Council.", "The test environment opens in January 2027. From January, all the tools are added step by step."],
+      "what": ["ENG and the technical partners build one shared test environment for the three cities. It is installed on servers of the Lisbon Council.", "The test environment opens in January 2027. From January, all the tools are added step by step, starting with the core components."],
       "cityDoes": ["Nothing to install.", "Your part: identify the right people in your city and the use cases for the tests. Then the tests can start."],
       "cityNot": ["No installation"],
       "help": "ENG, TEC, WP6 and the technical partners"
@@ -151,7 +151,7 @@ window.UF_ROADMAP = {
   "dates": [
     { "when": "November 2026", "what": "Each city identifies the right people and the use cases for the tests.", "who": "Cities" },
     { "when": "December 2026", "what": "The data tools and collaboration platform (version 1, D3.3) are delivered.", "who": "ENG" },
-    { "when": "January 2027", "what": "The testing window opens. From now on, all the tools are added step by step.", "who": "ENG · technical partners" },
+    { "when": "January 2027", "what": "The testing window opens. From now on, all the tools are added step by step, starting with the core components.", "who": "ENG · technical partners" },
     { "when": "January – June 2027", "what": "The cities test the tools and give structured feedback.", "who": "Cities · tool owners" },
     { "when": "June 2027", "what": "Feedback and final selection of the tools. First integrated Toolbox (MS4).", "who": "Cities · tool owners" },
     { "when": "June 2027 – April 2028", "what": "Local setup and first implementation round in each city.", "who": "Cities · technical partners" },
