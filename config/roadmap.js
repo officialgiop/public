@@ -101,7 +101,7 @@ window.UF_ROADMAP = {
     { "kind": "step", "step": 4, "when": "Jun 2027 – Apr 2028", "months": "M18–M28",
       "title": "Implement: you install your own Toolbox" },
     { "kind": "milestone", "when": "Apr 2028", "months": "M28 · MS6", "title": "First implementation round completed (MS6)",
-      "details": ["Each pilot city has installed its own Toolbox and has completed the first round of its pilot.", "Each city describes this first round in its pilot implementation report."] },
+      "details": ["Each pilot city has installed its own Toolbox and has completed the first round of its pilot.", "Each city describes this first round in its pilot implementation report (D6.3 Valencia, D6.5 Florence, D6.7 Tampere).", "Deliverables due in the same month: the three pilot implementation reports and the Living Labs logbook (D6.1)."] },
     { "kind": "milestone", "when": "Apr 2029", "months": "M40 · MS7", "title": "Final implementation round completed (MS7)",
       "details": ["The second and final round of the pilot is completed in each pilot city."] }
   ],
