@@ -145,7 +145,7 @@ window.UF_ROADMAP = {
   },
   "datesTitle": "Key dates for the cities",
   "dates": [
-    { "when": "Oct – Dec 2026", "what": "Step 1, Setup: we set up the shared test environment on servers of the Lisbon Council.", "who": "ENG · TEC · technical partners" },
+    { "when": "Oct – Dec 2026", "what": "Step 1, Setup: the shared test environment is set up on servers of the Lisbon Council.", "who": "ENG · TEC · technical partners" },
     { "when": "Nov – Dec 2026", "what": "Each city identifies the right people and the use cases for the tests.", "who": "Cities" },
     { "when": "Dec 2026", "what": "Deliverable D3.3: the data tools and collaboration platform (version 1) is delivered.", "who": "ENG" },
     { "when": "Jan – Jun 2027", "what": "Step 2, Testing window: the cities test the tools. From January, all the tools are added step by step, starting with the core components.", "who": "Cities · technical partners" },
