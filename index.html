@@ -1022,7 +1022,7 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
 .rm-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:start}
 .rm-shot{margin:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}
 .rm-bridge{display:flex;flex-direction:column;align-items:center;gap:2px;margin:-6px 0;color:var(--g800);font-weight:800;font-size:15px;text-align:center}
-@media print{.rm-bridge{margin:0}}
+@media print{.rm-sec>h2,.rm-sec>.rm-lead{break-after:avoid}.rm-vt>li:first-child{break-before:avoid}.rm-bridge{margin:0;break-inside:avoid;break-after:avoid;page-break-after:avoid}.rm-shot{break-inside:avoid}}
 .rm-shott{margin:0;padding:12px 14px 10px;font-weight:800;font-size:16px;color:var(--g800)}
 .rm-shot img{display:block;width:100%;height:auto}
 .rm-shot figcaption{padding:10px 14px;font-size:14px;color:var(--muted)}
