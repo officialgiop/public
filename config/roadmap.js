@@ -25,7 +25,8 @@ window.UF_ROADMAP = {
     "kicker": "The goal",
     "headline": "By April 2028, each pilot city has its own Urban-Flow Toolbox installed in its municipality and has completed the first implementation round.",
     "text": "This is milestone MS6 of the Grant Agreement (month 28). We get there in four steps.",
-    "stats": []
+    "stats": [],
+    "note": "We are flexible on the testing period. What matters is to reach the milestone of month 28 (M28, April 2028)."
   },
   "toolbox": {
     "title": "What is the Toolbox?",
