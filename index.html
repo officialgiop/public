@@ -1682,8 +1682,6 @@ var SI = (function () {
 function sideNav() {
   var mods = function (ids) { return ids.filter(function (id) { var e = D.byId[id]; return e && !e.ext && !e.mod; }); };
   return [
-    { sec: 'For the cities' },
-    { view: 'roadmap', icon: 'route', label: 'Roadmap for the cities' },
     { sec: 'Tools' },
     { id: 'epart', icon: 'people', label: 'e-Participation' },
     { grp: 'ldt', icon: 'twin', label: 'Local Digital Twin', cities: ['Valencia', 'Florence', 'Tampere'] },
@@ -1700,6 +1698,7 @@ function sideNav() {
     { sec: 'Urban-Flow Use Case' },
     { view: 'comic', icon: 'people', label: 'Valdarena' },
     { sec: 'Platform' },
+    { view: 'roadmap', icon: 'route', label: 'Roadmap for the cities' },
     { view: 'arch', icon: 'arch', label: 'Reference Architecture' },
     { view: 'tools', icon: 'list', label: 'Tools & partners' },
     { id: 'authz', icon: 'shield', label: 'Access & roles' }
