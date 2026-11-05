@@ -33,7 +33,7 @@ window.UF_ROADMAP = {
     "points": [
       { "t": "One web portal for all tools", "d": "The tools are not separate websites. They are integrated in the Toolbox and open inside the same portal." },
       { "t": "One login for all the tools", "d": "A single login, managed by a central Keycloak, gives access to every tool." },
-      { "t": "Same base, different tools", "d": "The shared base is the same for every city. For each topic (heat, energy, mobility, air) each city chooses the tools it needs." }
+      { "t": "Same base, different tools", "d": "During the testing window there is one shared base for all the cities. On top of it, each city tests the tools that were chosen and assigned to it." }
     ],
     "layersTitle": "The Toolbox in one picture",
     "layers": [
