@@ -57,7 +57,7 @@ window.UF_ROADMAP = {
       "what": ["ENG and the technical partners build one shared test environment for the three cities. It is installed on servers of the Lisbon Council.", "The test environment opens in January 2027. From January, all the tools are added step by step."],
       "cityDoes": ["Nothing to install.", "Your only part: identify the right people and the use cases, so that the tests can start."],
       "cityNot": ["No installation"],
-      "help": "ENG and the technical partners"
+      "help": "ENG, TEC, WP6 and the technical partners"
     },
     {
       "n": 2, "bar": [3, 9], "name": "Testing window", "when": "January – June 2027", "months": "Months 13–18", "here": false,
