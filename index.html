@@ -1098,7 +1098,7 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
 .rm-vc summary:focus-visible{outline:3px solid var(--g800);outline-offset:2px}
 .rm-vk{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--lime-tint);color:var(--g800)}
 .rm-vtt{font-size:17px;font-weight:700;color:var(--g800);flex:1 1 220px;min-width:0}
-.rm-vhere{font-style:normal;font-size:11px;font-weight:800;background:#c25e00;color:#fff;padding:2px 8px;border-radius:6px}
+.rm-vhere{display:inline-flex;align-items:center;gap:4px;font-style:normal;font-size:11px;font-weight:800;background:#c25e00;color:#fff;padding:2px 8px;border-radius:6px}
 .rm-vb{display:flex;flex-direction:column;gap:8px;padding:0 16px 16px}
 .rm-vb h4{margin:6px 0 0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--g600)}
 .rm-vb ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:15px;line-height:1.5}
@@ -3042,7 +3042,7 @@ function rmRoadmap() {
     return '<li class="rm-vi ' + esc(it.kind) + (st ? ' s' + st.n : '') + '">' +
       '<span class="rm-vd"><strong>' + esc(it.when) + '</strong><small>' + esc(it.months || '') + '</small></span>' +
       '<span class="rm-vdot" aria-hidden="true"></span>' +
-      '<details class="rm-vc"' + (it.open ? ' open' : '') + '><summary><span class="rm-vk">' + K[it.kind] + (st ? ' ' + st.n : '') + '</span><span class="rm-vtt">' + esc(it.title) + '</span>' + (it.here ? '<em class="rm-vhere">We are here</em>' : '') + '</summary><div class="rm-vb">' + body + '</div></details></li>';
+      '<details class="rm-vc"' + (it.open ? ' open' : '') + '><summary><span class="rm-vk">' + K[it.kind] + (st ? ' ' + st.n : '') + '</span><span class="rm-vtt">' + esc(it.title) + '</span>' + (it.here ? '<em class="rm-vhere"><svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>We are here</em>' : '') + '</summary><div class="rm-vb">' + body + '</div></details></li>';
   }).join('') + '</ol>';
 }
 function rmStep(s) {
