@@ -8,7 +8,7 @@
  *
  * The content after "window.UF_ROADMAP =" is plain JSON: double quotes, no trailing commas, no comments.
  *
- * goal      headline, text and three numbers shown at the top
+ * goal      headline and text shown at the top (stats[] = optional number tiles, now empty)
  * toolbox   what the Toolbox is: lead, points[], layers[] (the picture), flow[] (how data travels)
  * steps[]   the four steps. Fields: n, bar [first month, last month + 1] on the timeline (0 = October 2026), name, when, months, headline, what[], cityDoes[], cityNot[]tip (optional), help, here (true = "We are here")
  * comic[]   the four-panel story: who (luca | chiara | davide), name, role, scene (office | map | meeting | street), step, text
@@ -25,11 +25,7 @@ window.UF_ROADMAP = {
     "kicker": "The goal",
     "headline": "By April 2028, each pilot city has its own Urban-Flow Toolbox installed in its municipality and has completed the first implementation round.",
     "text": "This is milestone MS6 of the Grant Agreement (month 28). We get there in four steps.",
-    "stats": [
-      { "v": "3", "l": "pilot cities", "s": "Valencia · Florence · Tampere" },
-      { "v": "26", "l": "tools in the Toolbox", "s": "9 system tools + 17 Marketplace tools" },
-      { "v": "April 2028", "l": "first implementation round completed", "s": "Month 28 · milestone MS6 of the Grant Agreement" }
-    ]
+    "stats": []
   },
   "toolbox": {
     "title": "What is the Toolbox?",
