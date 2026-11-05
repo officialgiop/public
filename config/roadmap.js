@@ -92,7 +92,7 @@ window.UF_ROADMAP = {
     { "kind": "step", "step": 1, "when": "Oct – Dec 2026", "months": "M10–M12", "here": true, "open": true,
       "title": "Setup: we set up the shared test environment" },
     { "kind": "deliverable", "when": "Dec 2026", "months": "M12", "title": "Data tools and collaboration platform, version 1 (D3.3)",
-      "details": ["The first building blocks to manage data, calculate indicators and involve stakeholders.", "They are the base of the shared test environment."] },
+      "details": ["The first building blocks to manage data, calculate indicators and involve stakeholders.", "They are the base of the shared test environment.", "ENG is responsible for this activity."] },
     { "kind": "step", "step": 2, "when": "Jan – Jun 2027", "months": "M13–M18",
       "title": "Testing window: you test the tools" },
     { "kind": "step", "step": 3, "when": "Jun 2027", "months": "M18",
