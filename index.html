@@ -1078,6 +1078,38 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
 .rm-gain{margin:4px 0 0;padding:10px 12px;border-radius:10px;background:var(--lime-tint);font-size:14px}
 .rm-help{margin:auto 0 0;padding-top:6px;font-size:13px;color:var(--muted)}
 .rm-flex{margin:0;padding:14px 18px;border-radius:14px;background:var(--lime);color:var(--g900);font-size:16px}
+/* vertical roadmap */
+.rm-vt{list-style:none;margin:0;padding:0;position:relative}
+.rm-vt::before{content:"";position:absolute;left:163px;top:10px;bottom:10px;width:4px;border-radius:2px;background:var(--g600)}
+.rm-vi{display:grid;grid-template-columns:150px 28px minmax(0,1fr);align-items:start}
+.rm-vd{padding:14px 12px 0 0;text-align:right}.rm-vd strong{display:block;font-size:14px;color:var(--g800)}.rm-vd small{display:block;font-size:12px;font-weight:700;color:var(--muted)}
+.rm-vdot{position:relative;height:100%;display:flex;justify-content:center;padding-top:16px}
+.rm-vdot::after{content:"";position:relative;z-index:1;width:20px;height:20px;border-radius:50%;background:var(--lime);border:4px solid var(--g800);box-sizing:border-box;height:20px}
+.rm-vi.milestone .rm-vdot::after{border-radius:2px;transform:rotate(45deg);background:var(--g900);border-color:var(--g900);width:16px;height:16px;margin-top:2px}
+.rm-vi.deliverable .rm-vdot::after{width:14px;height:14px;margin-top:3px;background:#fff}
+.rm-vc{margin:6px 0 12px 0;background:#fff;border:1px solid var(--line);border-left:7px solid var(--g600);border-radius:12px}
+.rm-vi.s2 .rm-vc{border-left-color:var(--lime)}.rm-vi.s3 .rm-vc{border-left-color:var(--olive)}.rm-vi.s4 .rm-vc{border-left-color:var(--g900)}
+.rm-vi.milestone .rm-vc{border-left-color:var(--navy)}.rm-vi.deliverable .rm-vc{border-left-color:#7d8784}
+.rm-vc summary{list-style:none;cursor:pointer;display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;padding:12px 16px;border-radius:12px}
+.rm-vc summary::-webkit-details-marker{display:none}
+.rm-vc summary::after{content:"+";margin-left:auto;font-size:22px;line-height:1;font-weight:800;color:var(--g600)}
+.rm-vc[open] summary::after{content:"–"}
+.rm-vc summary:focus-visible{outline:3px solid var(--g800);outline-offset:2px}
+.rm-vk{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--lime-tint);color:var(--g800)}
+.rm-vtt{font-size:17px;font-weight:700;color:var(--g800);flex:1 1 220px;min-width:0}
+.rm-vhere{font-style:normal;font-size:11px;font-weight:800;background:#c25e00;color:#fff;padding:2px 8px;border-radius:6px}
+.rm-vb{display:flex;flex-direction:column;gap:8px;padding:0 16px 16px}
+.rm-vb h4{margin:6px 0 0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--g600)}
+.rm-vb ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:15px;line-height:1.5}
+.rm-vb ul.do{font-weight:600;color:var(--g800)}
+.rm-vb .rm-gain,.rm-vb .rm-tip{margin:2px 0 0}.rm-vb .rm-help{margin:0;padding-top:2px}
+@media (max-width:760px){
+  .rm-vt::before{left:12px}
+  .rm-vi{grid-template-columns:28px minmax(0,1fr)}
+  .rm-vd{grid-column:2;text-align:left;padding:10px 0 0}
+  .rm-vdot{grid-column:1;grid-row:1 / span 2}
+  .rm-vc{grid-column:2}
+}
 /* four panels */
 .rm-comic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .rm-panel{margin:0;border:3px solid var(--g900);border-radius:8px;overflow:hidden;background:#fff;display:flex;flex-direction:column}
@@ -1155,6 +1187,7 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
   .rm-step.s1 .rm-not{font-size:13px;padding:4px 12px}
   .rm-scene{height:105px}
   .rm-cols{grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start}.rm-lcard{padding:12px}
+  .rm-vi{break-inside:avoid}.rm-vc summary::after{display:none}.rm-vtt{font-size:14px}.rm-vb ul{font-size:12px;gap:2px}.rm-vb{gap:5px;padding:0 12px 10px}.rm-vd strong{font-size:12px}.rm-vi{grid-template-columns:110px 28px minmax(0,1fr)}.rm-vt::before{left:123px}
   .rm-sec{margin:0}
   footer.site{break-inside:avoid;margin-top:6px}
   footer.site .fund{padding:10px 16px}footer.site .fund img{height:34px}
@@ -2991,6 +3024,26 @@ function rmGantt() {
   var here = T.here ? '<span class="rm-ghere" style="grid-column:' + (T.here.m + 2) + ';grid-row:1 / ' + (mrow + 1) + '"><em>' + esc(T.here.label) + '</em></span>' : '';
   return '<div class="rm-gantt" aria-hidden="true" style="grid-template-columns:150px repeat(' + n + ',minmax(0,1fr))">' + yh + cells.join('') + rows + marks + here + '</div>';
 }
+function rmStepBody(s) {
+  var not = (s.cityNot || []).map(function (x) { return '<span class="rm-not"><b aria-hidden="true">✕</b> ' + esc(x) + '</span>'; }).join('');
+  return (not ? '<div class="rm-nots">' + not + '</div>' : '') +
+    '<h4>What happens</h4>' + rmList(s.what) +
+    '<h4>What your city does</h4>' + rmList(s.cityDoes, 'do') +
+    (s.tip ? '<p class="rm-tip"><strong>Tip.</strong> ' + esc(s.tip) + '</p>' : '') +
+    (s.gain ? '<p class="rm-gain"><strong>What you gain.</strong> ' + esc(s.gain) + '</p>' : '') +
+    '<p class="rm-help"><strong>Who helps:</strong> ' + esc(s.help) + '</p>';
+}
+function rmRoadmap() {
+  var K = { step: 'Step', deliverable: 'Deliverable', milestone: 'Milestone' };
+  return '<ol class="rm-vt">' + (RM.roadmap || []).map(function (it) {
+    var st = it.step ? RM.steps[it.step - 1] : null;
+    var body = st ? rmStepBody(st) : rmList(it.details || []);
+    return '<li class="rm-vi ' + esc(it.kind) + (st ? ' s' + st.n : '') + '">' +
+      '<span class="rm-vd"><strong>' + esc(it.when) + '</strong><small>' + esc(it.months || '') + '</small></span>' +
+      '<span class="rm-vdot" aria-hidden="true"></span>' +
+      '<details class="rm-vc"' + (it.open ? ' open' : '') + '><summary><span class="rm-vk">' + K[it.kind] + (st ? ' ' + st.n : '') + '</span><span class="rm-vtt">' + esc(it.title) + '</span>' + (it.here ? '<em class="rm-vhere">We are here</em>' : '') + '</summary><div class="rm-vb">' + body + '</div></details></li>';
+  }).join('') + '</ol>';
+}
 function rmStep(s) {
   var not = (s.cityNot || []).map(function (x) { return '<span class="rm-not"><b aria-hidden="true">✕</b> ' + esc(x) + '</span>'; }).join('');
   return '<li class="rm-step s' + s.n + (s.here ? ' here' : '') + '">' +
@@ -3042,13 +3095,16 @@ function vRoadmap() {
     '<section class="rm-goal" aria-labelledby="rm-g"><p class="eyebrow">' + esc(G.kicker) + '</p><h2 id="rm-g">' + esc(G.headline) + '</h2><p>' + esc(G.text) + '</p>' + (stats ? '<div class="rm-stats">' + stats + '</div>' : '') + '<ol class="rm-prev" aria-label="The four steps at a glance">' + RM.steps.map(function (st) { return '<li class="s' + st.n + '"><span class="rm-pn">' + st.n + '</span><span><strong>' + esc(st.name) + '</strong><small>' + esc(st.when.replace(/^From /, '')) + '</small><em>' + esc(st.headline) + '</em></span></li>'; }).join('') + '</ol>' + (G.note ? '<p class="rm-gnote"><strong>Disclaimer.</strong> ' + esc(G.note) + '</p>' : '') + '</section>' +
     '<section class="rm-sec" aria-labelledby="rm-b"><h2 id="rm-b">' + esc(B.title) + '</h2><div class="rm-two"><div><p class="rm-lead">' + esc(B.lead) + '</p></div>' +
     '<figure class="rm-fig" aria-label="' + esc(B.layersTitle) + '"><figcaption>' + esc(B.layersTitle) + '</figcaption><div class="rm-lays"><div class="rm-lmain">' + lay + '</div><div class="rm-liam"><strong>' + esc(B.iam.t) + '</strong><span>' + esc(B.iam.d) + '</span></div></div><p class="rm-flowt">' + esc(B.flowTitle) + '</p><div class="rm-flow">' + flow + '</div></figure></div><ul class="rm-pts">' + pts + '</ul></section>' +
-    '<section class="rm-sec" aria-labelledby="rm-s"><h2 id="rm-s">' + esc(RM.stepsTitle) + '</h2><p class="rm-lead">' + esc(RM.stepsLead) + '</p>' + rmGantt() + '<ol class="rm-steps">' + RM.steps.map(rmStep).join('') + '</ol><p class="rm-flex"><strong>We are flexible.</strong> ' + esc(RM.flexible) + '</p></section>' +
+    '<section class="rm-sec" aria-labelledby="rm-s"><h2 id="rm-s">' + esc(RM.stepsTitle) + '</h2><p class="rm-lead">' + esc(RM.stepsLead) + '</p>' + rmRoadmap() + '<p class="rm-flex"><strong>We are flexible.</strong> ' + esc(RM.flexible) + '</p></section>' +
     '<section class="rm-sec rm-keep" aria-labelledby="rm-c"><h2 id="rm-c">' + esc(RM.comicTitle) + '</h2>' + rmComic() + '</section>' +
     rmTools() +
     '<section class="rm-sec rm-keep" aria-labelledby="rm-d"><h2 id="rm-d">' + esc(RM.datesTitle) + '</h2><div class="tbl2 card"><table><thead><tr><th scope="col">When</th><th scope="col">What happens</th><th scope="col">Who</th></tr></thead><tbody>' + dates + '</tbody></table></div><p class="rm-close">' + esc(RM.closing) + '</p></section>' +
     '</div>';
 }
 
+var rmWasOpen = null;
+window.addEventListener('beforeprint', function () { rmWasOpen = []; Array.prototype.forEach.call(document.querySelectorAll('.rm-vc'), function (d) { rmWasOpen.push(d.open); d.open = true; }); });
+window.addEventListener('afterprint', function () { if (!rmWasOpen) return; Array.prototype.forEach.call(document.querySelectorAll('.rm-vc'), function (d, i) { d.open = !!rmWasOpen[i]; }); rmWasOpen = null; });
 function render() {
   if (!S.role) { app.innerHTML = vLogin(); document.title = 'Sign in · Urban-Flow Toolbox (mockup)'; return; }
   var body = S.view === 'roadmap' ? vRoadmap() : S.view === 'comic' ? vComic() : S.view === 'tour' ? vTour() : S.view === 'journey' ? vJourney() : S.view === 'tools' ? vToolsDir() : S.view === 'story' ? vStory() : S.view === 'tool' ? vTool() : S.view === 'denied' ? vDenied() : S.view === 'arch' ? vArch() : vHome();

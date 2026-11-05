@@ -10,6 +10,7 @@
  *
  * goal      headline and text shown at the top (stats[] = optional number tiles, now empty)
  * toolbox   what the Toolbox is: lead, points[], layers[] (the picture), flow[] (how data travels)
+ * roadmap[] the vertical timeline: kind (step | deliverable | milestone), when, months, title, details[] (for a step, step: n takes the details from steps[]), here (true = "We are here"), open (true = open at start).
  * steps[]   the four steps. Fields: n, bar [first month, last month + 1] on the timeline (0 = October 2026), name, when, months, headline, what[], cityDoes[], cityNot[]tip (optional), help, here (true = "We are here")
  * comic[]   the four-panel story: who (luca | chiara | davide), name, role, scene (office | map | meeting | street), step, text
  * tools     how the final list of tools is made: groups[] (system, chosen, test) and the list of system tools.
@@ -47,7 +48,7 @@ window.UF_ROADMAP = {
     "flow": ["Collect", "Store", "Measure", "Analyse", "Decide"]
   },
   "stepsTitle": "How we get there: four steps",
-  "stepsLead": "One shared test environment now, and a Toolbox in each city from mid-2027.",
+  "stepsLead": "One shared test environment now, and a Toolbox in each city from mid-2027. Click a title to see what is included.",
   "flexible": "The timeline is flexible. What matters: all the tools are tested, and every city has installed its own Toolbox and completed the first implementation round by April 2028.",
   "steps": [
     {
@@ -86,6 +87,24 @@ window.UF_ROADMAP = {
       "tip": "This is the first of two implementation rounds. The final round is completed in April 2029 (milestone MS7, month 40).",
       "help": "The technical partners support you in this phase too"
     }
+  ],
+  "roadmap": [
+    { "kind": "step", "step": 1, "when": "Oct – Dec 2026", "months": "M10–M12", "here": true, "open": true,
+      "title": "Setup: we set up the shared test environment" },
+    { "kind": "deliverable", "when": "Dec 2026", "months": "M12", "title": "Data tools and collaboration platform, version 1 (D3.3)",
+      "details": ["The first building blocks to manage data, calculate indicators and involve stakeholders.", "They are the base of the shared test environment."] },
+    { "kind": "step", "step": 2, "when": "Jan – Jun 2027", "months": "M13–M18",
+      "title": "Testing window: you test the tools" },
+    { "kind": "step", "step": 3, "when": "Jun 2027", "months": "M18",
+      "title": "Feedback: you give feedback and choose" },
+    { "kind": "milestone", "when": "Jun 2027", "months": "M18 · MS4", "title": "First integrated Toolbox (MS4, D3.6)",
+      "details": ["The first version of the Urban-Flow platform, which brings together the first tools and building blocks."] },
+    { "kind": "step", "step": 4, "when": "Jun 2027 – Apr 2028", "months": "M18–M28",
+      "title": "Implement: you install your own Toolbox" },
+    { "kind": "milestone", "when": "Apr 2028", "months": "M28 · MS6", "title": "First implementation round completed (MS6)",
+      "details": ["Each pilot city has installed its own Toolbox and has completed the first round of its pilot.", "Each city describes this first round in its pilot implementation report."] },
+    { "kind": "milestone", "when": "Apr 2029", "months": "M40 · MS7", "title": "Final implementation round completed (MS7)",
+      "details": ["The second and final round of the pilot is completed in each pilot city."] }
   ],
   "timeline": {
     "title": "The timeline",
