@@ -1010,6 +1010,12 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
 .rm-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:8px}
 .rm-stat{display:flex;flex-direction:column;gap:2px;padding:16px 18px;border-radius:14px;background:rgba(255,255,255,.1);border:1px solid rgba(219,242,124,.4)}
 .rm-stat strong{font-size:34px;line-height:1.1;font-weight:800;color:var(--lime)}
+.rm-prev{list-style:none;margin:6px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.rm-prev li{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(219,242,124,.4);min-width:0}
+.rm-pn{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--lime);color:var(--g900);display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:15px}
+.rm-prev strong{display:block;color:#fff;font-size:15px}.rm-prev small{display:block;color:var(--lime);font-size:12px;font-weight:700;margin-top:1px}.rm-prev em{display:block;font-style:normal;color:#cfdad6;font-size:13px;line-height:1.35;margin-top:4px}
+@media (max-width:1000px){.rm-prev{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.rm-prev{grid-template-columns:minmax(0,1fr)}}
 .rm-stat span{font-weight:700}
 .rm-stat small{font-size:13px;color:#cfdad6}
 .rm-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:start}
@@ -1139,7 +1145,8 @@ mark.cw:hover,mark.cw:focus-visible{outline:2px solid var(--g900);outline-offset
   .rm-tg p{font-size:12.5px}.rm-tn{font-size:34px}
   .rm-tl strong{font-size:12.5px}.rm-tl small{font-size:11px}.rm-tl li{padding:4px 0}
   .rm-keep .tbl2 table{font-size:12.5px}
-  .rm-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}.rm-stat span,.rm-stat small{font-size:11px}
+  .rm-stats{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .rm-prev{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:6px}.rm-prev li{padding:8px 9px;gap:6px}.rm-prev em{font-size:10.5px}.rm-prev strong{font-size:12px}.rm-prev small{font-size:10px}.rm-pn{width:20px;height:20px;font-size:11px}.rm-stat span,.rm-stat small{font-size:11px}
   .rm-pts{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
   .rm-groups{flex-wrap:nowrap}.rm-tg{flex:1 1 0;padding:10px 12px}.rm-plus{font-size:20px}
   .rm-step{gap:5px}.rm-step ul{gap:2px;font-size:12px}.rm-step h4{margin-top:3px}.rm-nots{gap:6px}
@@ -3030,7 +3037,7 @@ function vRoadmap() {
     '<header class="phead"><div class="ph-l"><h1>' + esc(RM.title) + '</h1></div>' +
     '<div class="wrap rm-actions" style="gap:10px">' + (RM.pdf ? '<a class="btn lime" href="' + esc(RM.pdf) + '" download>Download the PDF summary</a>' : '') + '</div>' +
     '<nav class="pcrumb" aria-label="Breadcrumb"><button type="button" data-act="nav" data-arg="home">Home</button><span aria-hidden="true">›</span><span aria-current="page">' + esc(RM.title) + '</span></nav></header>' +
-    '<section class="rm-goal" aria-labelledby="rm-g"><p class="eyebrow">' + esc(G.kicker) + '</p><h2 id="rm-g">' + esc(G.headline) + '</h2><p>' + esc(G.text) + '</p><div class="rm-stats">' + stats + '</div></section>' +
+    '<section class="rm-goal" aria-labelledby="rm-g"><p class="eyebrow">' + esc(G.kicker) + '</p><h2 id="rm-g">' + esc(G.headline) + '</h2><p>' + esc(G.text) + '</p><div class="rm-stats">' + stats + '</div><ol class="rm-prev" aria-label="The four steps at a glance">' + RM.steps.map(function (st) { return '<li class="s' + st.n + '"><span class="rm-pn">' + st.n + '</span><span><strong>' + esc(st.name) + '</strong><small>' + esc(st.when.replace(/^From /, '')) + '</small><em>' + esc(st.headline) + '</em></span></li>'; }).join('') + '</ol></section>' +
     '<section class="rm-sec" aria-labelledby="rm-b"><h2 id="rm-b">' + esc(B.title) + '</h2><div class="rm-two"><div><p class="rm-lead">' + esc(B.lead) + '</p><ul class="rm-pts">' + pts + '</ul></div>' +
     '<figure class="rm-fig" aria-label="' + esc(B.layersTitle) + '"><figcaption>' + esc(B.layersTitle) + '</figcaption><div class="rm-lays"><div class="rm-lmain">' + lay + '</div><div class="rm-liam"><strong>' + esc(B.iam.t) + '</strong><span>' + esc(B.iam.d) + '</span></div></div><p class="rm-flowt">' + esc(B.flowTitle) + '</p><div class="rm-flow">' + flow + '</div></figure></div></section>' +
     '<section class="rm-sec" aria-labelledby="rm-s"><h2 id="rm-s">' + esc(RM.stepsTitle) + '</h2><p class="rm-lead">' + esc(RM.stepsLead) + '</p>' + rmGantt() + '<ol class="rm-steps">' + RM.steps.map(rmStep).join('') + '</ol><p class="rm-flex"><strong>We are flexible.</strong> ' + esc(RM.flexible) + '</p></section>' +
