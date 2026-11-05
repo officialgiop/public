@@ -146,7 +146,7 @@ window.UF_ROADMAP = {
   "datesTitle": "Key dates for the cities",
   "dates": [
     { "when": "November – December 2026", "what": "Each city identifies the right people and the use cases for the tests.", "who": "Cities" },
-    { "when": "December 2026", "what": "The data tools and collaboration platform (version 1, D3.3) are delivered.", "who": "ENG" },
+    { "when": "December 2026", "what": "The data tools and collaboration platform (version 1, D3.3) is delivered.", "who": "ENG" },
     { "when": "January 2027", "what": "The testing window opens. From now on, all the tools are added step by step, starting with the core components.", "who": "ENG · technical partners" },
     { "when": "January – June 2027", "what": "The cities test the tools and give structured feedback.", "who": "Cities · tool owners" },
     { "when": "June 2027", "what": "Feedback and final selection of the tools. First integrated Toolbox (MS4).", "who": "Cities · tool owners" },
