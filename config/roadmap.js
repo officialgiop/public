@@ -97,7 +97,7 @@ window.UF_ROADMAP = {
     { "kind": "step", "step": 3, "when": "Jun 2027", "months": "M18",
       "title": "Feedback: you give feedback and choose" },
     { "kind": "milestone", "when": "Jun 2027", "months": "M18 · MS4", "title": "First integrated Toolbox (MS4, D3.6)",
-      "details": ["The first version of the Urban-Flow platform, which brings together the first tools and building blocks."] },
+      "details": ["The first version of the Urban-Flow platform, which brings together the first tools and building blocks."], "help": "TEC" },
     { "kind": "step", "step": 4, "when": "Jun 2027 – Apr 2028", "months": "M18–M28",
       "title": "Implement: you install your own Toolbox" },
     { "kind": "milestone", "when": "Apr 2028", "months": "M28 · MS6", "title": "First implementation round completed (MS6)",
