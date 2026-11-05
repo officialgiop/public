@@ -37,7 +37,7 @@ window.UF_ROADMAP = {
       { "t": "One login for all the tools", "d": "A single login, managed by a central Keycloak, gives access to every tool." },
       { "t": "Same base, different tools", "d": "During the testing window there is one shared base for all the cities. On top of it, each city tests the tools that were chosen and assigned to it." }
     ],
-    "layersTitle": "The Toolbox in one picture",
+    "layersTitle": "The Toolbox architecture in one picture",
     "layers": [
       { "id": "ui", "t": "What you use", "d": "Local Digital Twin, e-Participation, dashboards, indicators, AI assistant, administration" },
       { "id": "mp", "t": "Marketplace", "d": "Tools for one topic: heat, energy, mobility, air. Here the cities differ." },
