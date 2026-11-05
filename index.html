@@ -3001,7 +3001,7 @@ function comicSchedule() {
 var RM = window.UF_ROADMAP || null;
 var RM_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 function rmToolSplit(s) { var m = String(s).match(/^(.*?)\s*\((.*?)\)\s*(.*)$/); return m ? { n: m[1], d: m[2] } : { n: String(s), d: '' }; }
-function rmList(a, cls) { return a && a.length ? '<ul' + (cls ? ' class="' + cls + '"' : '') + '>' + a.map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul>' : ''; }
+function rmList(a, cls) { return a && a.length ? '<ul' + (cls ? ' class="' + cls + '"' : '') + '>' + a.map(function (x) { return '<li>' + (x && x.t ? esc(x.t) + rmList(x.sub) : esc(x)) + '</li>'; }).join('') + '</ul>' : ''; }
 function rmGantt() {
   var T = RM.timeline, n = T.months, y0 = +T.start.slice(0, 4), m0 = +T.start.slice(5, 7) - 1;
   var cells = [], years = [], i;
