@@ -3037,7 +3037,7 @@ function rmRoadmap() {
   var K = { step: 'Step', deliverable: 'Deliverable', milestone: 'Milestone' };
   return '<ol class="rm-vt">' + (RM.roadmap || []).map(function (it) {
     var st = it.step ? RM.steps[it.step - 1] : null;
-    var body = st ? rmStepBody(st) : rmList(it.details || []);
+    var body = st ? rmStepBody(st) : rmList(it.details || []) + (it.help ? '<p class="rm-help"><strong>Who is responsible:</strong> ' + esc(it.help) + '</p>' : '');
     return '<li class="rm-vi ' + esc(it.kind) + (st ? ' s' + st.n : '') + '">' +
       '<span class="rm-vd"><strong>' + esc(it.when) + '</strong><small>' + esc(it.months || '') + '</small></span>' +
       '<span class="rm-vdot" aria-hidden="true"></span>' +
