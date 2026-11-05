@@ -62,7 +62,7 @@ window.UF_ROADMAP = {
     {
       "n": 2, "bar": [3, 9], "name": "Testing window", "when": "January – June 2027", "months": "Months 13–18", "here": false,
       "headline": "You test the tools",
-      "what": ["The cities try the Marketplace tools and the other components in one shared environment.", "Connect your data and let the tools run their analyses."],
+      "what": ["Each city tests a mix of tools, all in the same shared environment:", "the Marketplace tools the city chose for its own needs;", "the core components of the architecture;", "where needed, a few other Marketplace tools. The Grant Agreement asks us to be sure that every tool is tested at least once.", "Connect your data and let the tools run their analyses."],
       "tip": "Try more than one tool for the same topic.",
       "cityDoes": ["Connect your data and play with the Toolbox.", "Tell us what you see."],
       "cityNot": ["No commitment to adopt a tool", "No installation", "No daily use in operations"],
