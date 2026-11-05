@@ -83,7 +83,6 @@ window.UF_ROADMAP = {
       "what": ["Each city installs its own Toolbox in its own municipality, with the tools that met its expectations.", "There are about 10 months for the local setup and the first implementation round of your pilot."],
       "cityDoes": ["Install your own Toolbox, with the technical partners helping you to configure it.", "April 2028 (milestone MS6): your Toolbox is installed, connected to your local data and systems, and the first round of your pilot is described in your pilot implementation report."],
       "cityNot": [],
-      "tip": "This is the first of two implementation rounds. The final round is completed in April 2029 (milestone MS7, month 40).",
       "help": "The technical partners support you in this phase too"
     }
   ],
@@ -101,9 +100,7 @@ window.UF_ROADMAP = {
     { "kind": "step", "step": 4, "when": "Jun 2027 – Apr 2028", "months": "M18–M28",
       "title": "Implement: you install your own Toolbox" },
     { "kind": "milestone", "when": "Apr 2028", "months": "M28 · MS6", "title": "First implementation round completed (MS6)",
-      "details": ["Each pilot city has installed its own Toolbox and has completed the first round of its pilot.", "Each city describes this first round in its pilot implementation report (D6.3 Valencia, D6.5 Florence, D6.7 Tampere).", "Deliverables due in the same month: the three pilot implementation reports and the Living Labs logbook (D6.1)."], "help": "VIC for the milestone, the Valencia report and the logbook; Florence and Tampere for their own reports" },
-    { "kind": "milestone", "when": "Apr 2029", "months": "M40 · MS7", "title": "Final implementation round completed (MS7)",
-      "details": ["The second and final round of the pilot is completed in each pilot city."] }
+      "details": ["Each pilot city has installed its own Toolbox and has completed the first round of its pilot.", "Each city describes this first round in its pilot implementation report (D6.3 Valencia, D6.5 Florence, D6.7 Tampere).", "Deliverables due in the same month: the three pilot implementation reports and the Living Labs logbook (D6.1)."], "help": "VIC for the milestone, the Valencia report and the logbook; Florence and Tampere for their own reports" }
   ],
   "timeline": {
     "title": "The timeline",
@@ -154,8 +151,7 @@ window.UF_ROADMAP = {
     { "when": "January – June 2027", "what": "The cities test the tools and give structured feedback.", "who": "Cities · tool owners" },
     { "when": "June 2027", "what": "Feedback and final selection of the tools. First integrated Toolbox (MS4).", "who": "Cities · tool owners" },
     { "when": "June 2027 – April 2028", "what": "Local setup and first implementation round in each city.", "who": "Cities · technical partners" },
-    { "when": "April 2028", "what": "First implementation round completed in each pilot city (MS6, month 28). The Toolbox is installed and the pilot implementation report is delivered.", "who": "Cities" },
-    { "when": "April 2029", "what": "Final implementation round completed (MS7, month 40).", "who": "Cities" }
+    { "when": "April 2028", "what": "First implementation round completed in each pilot city (MS6, month 28). The Toolbox is installed and the pilot implementation report is delivered.", "who": "Cities" }
   ],
   "closing": "Questions? Write to info@urban-flow.eu."
 };
