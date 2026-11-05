@@ -49,7 +49,8 @@ window.UF_ROADMAP = {
     "flow": ["Collect", "Store", "Measure", "Analyse", "Decide"]
   },
   "stepsTitle": "How we get there: four steps",
-  "stepsLead": "One shared test environment now, and a Toolbox in each city from mid-2027. Click a title to see what is included.",
+  "stepsLead": "One shared test environment now, and a Toolbox in each city from mid-2027.",
+  "stepsHint": "Click a title to see what is included.",
   "flexible": "The timeline is flexible. What matters: all the tools are tested, and every city has installed its own Toolbox and completed the first implementation round by April 2028.",
   "steps": [
     {
