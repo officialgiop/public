@@ -24,7 +24,7 @@ window.UF_ROADMAP = {
   "goal": {
     "kicker": "The goal",
     "headline": "By April 2028, each pilot city has its own Urban-Flow Toolbox installed in its municipality and has completed the first implementation round.",
-    "text": "This is milestone MS6 of the Grant Agreement (month 28). We get there in four steps. In the first one, ENG and the technical partners do the work: your city does not install anything.",
+    "text": "This is milestone MS6 of the Grant Agreement (month 28). We get there in four steps.",
     "stats": [
       { "v": "3", "l": "pilot cities", "s": "Valencia · Florence · Tampere" },
       { "v": "26", "l": "tools in the Toolbox", "s": "9 system tools + 17 Marketplace tools" },
