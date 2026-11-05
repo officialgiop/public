@@ -145,13 +145,14 @@ window.UF_ROADMAP = {
   },
   "datesTitle": "Key dates for the cities",
   "dates": [
-    { "when": "November – December 2026", "what": "Each city identifies the right people and the use cases for the tests.", "who": "Cities" },
-    { "when": "December 2026", "what": "The data tools and collaboration platform (version 1, D3.3) is delivered.", "who": "ENG" },
-    { "when": "January 2027", "what": "The testing window opens. From now on, all the tools are added step by step, starting with the core components.", "who": "ENG · technical partners" },
-    { "when": "January – June 2027", "what": "The cities test the tools and give structured feedback.", "who": "Cities · tool owners" },
-    { "when": "June 2027", "what": "Feedback and final selection of the tools. First integrated Toolbox (MS4).", "who": "Cities · tool owners" },
-    { "when": "June 2027 – April 2028", "what": "Local setup and first implementation round in each city.", "who": "Cities · technical partners" },
-    { "when": "April 2028", "what": "First implementation round completed in each pilot city (MS6, month 28). The Toolbox is installed and the pilot implementation report is delivered.", "who": "Cities" }
+    { "when": "Oct – Dec 2026", "what": "Step 1, Setup: we set up the shared test environment on servers of the Lisbon Council.", "who": "ENG · TEC · technical partners" },
+    { "when": "Nov – Dec 2026", "what": "Each city identifies the right people and the use cases for the tests.", "who": "Cities" },
+    { "when": "Dec 2026", "what": "Deliverable D3.3: the data tools and collaboration platform (version 1) is delivered.", "who": "ENG" },
+    { "when": "Jan – Jun 2027", "what": "Step 2, Testing window: the cities test the tools. From January, all the tools are added step by step, starting with the core components.", "who": "Cities · technical partners" },
+    { "when": "Jun 2027", "what": "Step 3, Feedback: the cities give feedback and choose.", "who": "Cities · tool owners · technical partners" },
+    { "when": "Jun 2027", "what": "Milestone MS4: first integrated Toolbox (D3.6).", "who": "TEC" },
+    { "when": "Jun 2027 – Apr 2028", "what": "Step 4, Implement: each city installs its own Toolbox.", "who": "Cities · technical partners" },
+    { "when": "Apr 2028", "what": "Milestone MS6: first implementation round completed in each pilot city. Deliverables: the pilot implementation reports (D6.3, D6.5, D6.7) and the Living Labs logbook (D6.1).", "who": "VIC · Florence · Tampere" }
   ],
   "closing": "Questions? Write to info@urban-flow.eu."
 };
