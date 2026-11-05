@@ -23,12 +23,12 @@ window.UF_ROADMAP = {
   "pdf": "assets/Urban-Flow_Roadmap_for_the_cities.pdf",
   "goal": {
     "kicker": "The goal",
-    "headline": "By April 2028, each pilot city runs its own Urban-Flow Toolbox, installed in its own municipality.",
-    "text": "We get there in four steps. In the first one, ENG and the technical partners do the work: your city does not install anything.",
+    "headline": "By April 2028, each pilot city has its own Urban-Flow Toolbox installed in its municipality and has completed the first implementation round.",
+    "text": "This is milestone MS6 of the Grant Agreement (month 28). We get there in four steps. In the first one, ENG and the technical partners do the work: your city does not install anything.",
     "stats": [
       { "v": "3", "l": "pilot cities", "s": "Valencia · Florence · Tampere" },
       { "v": "26", "l": "tools in the Toolbox", "s": "9 system tools + 17 Marketplace tools" },
-      { "v": "April 2028", "l": "your own Toolbox, ready", "s": "Month 28 of the project (milestone MS6)" }
+      { "v": "April 2028", "l": "first implementation round completed", "s": "Month 28 · milestone MS6 of the Grant Agreement" }
     ]
   },
   "toolbox": {
@@ -52,7 +52,7 @@ window.UF_ROADMAP = {
   },
   "stepsTitle": "How we get there: four steps",
   "stepsLead": "One shared test environment now, and a Toolbox in each city from mid-2027.",
-  "flexible": "The timeline is flexible. What matters: all the tools are tested, and every city has its own Toolbox in April 2028.",
+  "flexible": "The timeline is flexible. What matters: all the tools are tested, and every city has installed its own Toolbox and completed the first implementation round by April 2028.",
   "steps": [
     {
       "n": 1, "bar": [0, 3], "name": "Setup", "when": "October – December 2026", "months": "Months 10–12", "here": true,
@@ -84,9 +84,10 @@ window.UF_ROADMAP = {
     {
       "n": 4, "bar": [8, 19], "name": "Implement", "when": "From mid-2027 to April 2028", "months": "Months 18–28", "here": false,
       "headline": "You install your own Toolbox",
-      "what": ["Each city installs its own Toolbox in its own municipality, with the tools that met its expectations.", "There are about 10 months for the local setup and the first implementation."],
-      "cityDoes": ["Install your own Toolbox, with the technical partners helping you to configure it.", "April 2028: your Toolbox is running (milestone MS6)."],
+      "what": ["Each city installs its own Toolbox in its own municipality, with the tools that met its expectations.", "There are about 10 months for the local setup and the first implementation round of your pilot."],
+      "cityDoes": ["Install your own Toolbox, with the technical partners helping you to configure it.", "April 2028 (milestone MS6): your Toolbox is installed, connected to your local data and systems, and the first round of your pilot is described in your pilot implementation report."],
       "cityNot": [],
+      "tip": "This is the first of two implementation rounds. The final round is completed in April 2029 (milestone MS7, month 40).",
       "help": "The technical partners support you in this phase too"
     }
   ],
@@ -97,7 +98,7 @@ window.UF_ROADMAP = {
     "marks": [
       { "m": 2, "label": "Dec 2026", "text": "Data tools and collaboration platform V1 (D3.3)" },
       { "m": 8, "label": "Jun 2027", "text": "First integrated Toolbox (MS4, D3.6)" },
-      { "m": 18, "label": "Apr 2028", "text": "Your own Toolbox (MS6)" }
+      { "m": 18, "label": "Apr 2028", "text": "First implementation round completed (MS6)" }
     ],
     "here": { "m": 1, "label": "We are here" }
   },
@@ -106,7 +107,7 @@ window.UF_ROADMAP = {
     { "who": "luca", "name": "Luca", "role": "ENG", "scene": "office", "step": "Step 1 · Setup", "text": "We set up one test environment for all three cities. You install nothing, so there is no extra work for your IT team." },
     { "who": "chiara", "name": "Chiara", "role": "City officer", "scene": "map", "step": "Step 2 · Testing window", "text": "From January to June I connect our data and try the tools. I can try two tools for the same topic. It is a test, not a commitment." },
     { "who": "davide", "name": "Davide", "role": "City IT team", "scene": "meeting", "step": "Step 3 · Feedback", "text": "In June we say what works and what does not, tool by tool. The owners improve their tools. We keep the ones we like." },
-    { "who": "chiara", "name": "Chiara", "role": "City officer", "scene": "street", "step": "Step 4 · Implement", "text": "From mid-2027 we install our own Toolbox in the municipality, with help from the technical partners. In April 2028 it is ready." }
+    { "who": "chiara", "name": "Chiara", "role": "City officer", "scene": "street", "step": "Step 4 · Implement", "text": "From mid-2027 we install our own Toolbox in the municipality, with help from the technical partners. In April 2028 our first round is complete." }
   ],
   "tools": {
     "title": "Which tools will be in your Toolbox?",
@@ -139,7 +140,8 @@ window.UF_ROADMAP = {
     { "when": "January – June 2027", "what": "The cities test the tools and give structured feedback.", "who": "Cities · tool owners" },
     { "when": "June 2027", "what": "Feedback and final selection of the tools. First integrated Toolbox (MS4).", "who": "Cities · tool owners" },
     { "when": "June 2027 – April 2028", "what": "Local setup and first implementation round in each city.", "who": "Cities · technical partners" },
-    { "when": "April 2028", "what": "Each pilot city has its own Toolbox (MS6, month 28).", "who": "Cities" }
+    { "when": "April 2028", "what": "First implementation round completed in each pilot city (MS6, month 28). The Toolbox is installed and the pilot implementation report is delivered.", "who": "Cities" },
+    { "when": "April 2029", "what": "Final implementation round completed (MS7, month 40).", "who": "Cities" }
   ],
   "closing": "Questions? Write to info@urban-flow.eu."
 };
